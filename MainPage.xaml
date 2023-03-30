@@ -1,9 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Tic_tac_toe.MainPage">
+             x:Class="Tic_tac_toe.MainPage"
+             BackgroundColor="White"
+             >
 
-    <FlexLayout Direction="Column">
+    <FlexLayout Direction="Column" >
 
         <Label Text="Zlaja ako vidis ovo duzan si pivu"
                FontSize="10"
@@ -11,15 +13,138 @@
                BackgroundColor="White"
                HorizontalTextAlignment="Center" />
         <!-- Body -->
-        <FlexLayout FlexLayout.Grow="1">
+        <FlexLayout FlexLayout.Grow="0" HeightRequest="47.06">
 
             <!-- Content -->
-            <Label Text="MASNI GUMBIĆI"
-                   FontSize="18"
-                   BackgroundColor="White"
-                   HorizontalTextAlignment="Center"
-                   VerticalTextAlignment="Center"
-                   FlexLayout.Grow="1" />
+            <Button Text="DaDa1" BorderColor="Black" BorderWidth="0.5" CornerRadius="0"/>
+            <Button Text="DaDa2" BorderColor="Black" BorderWidth="0.5" CornerRadius="0"/>
+            <Button Text="DaDa3" BorderColor="Black" BorderWidth="0.5" CornerRadius="0"/>
+            <Button Text="DaDa4" BorderColor="Black" BorderWidth="0.5" CornerRadius="0"/>
+            <Button Text="DaDa5" BorderColor="Black" BorderWidth="0.5" CornerRadius="0"/>
+            <Button Text="DaDa6" BorderColor="Black" BorderWidth="0.5" CornerRadius="0"/>
+            <Button Text="DaDa7" BorderColor="Black" BorderWidth="0.5" CornerRadius="0"/>
+            <Button Text="DaDa8" BorderColor="Black" BorderWidth="0.5" CornerRadius="0"/>
+            <Button Text="DaDa9" BorderColor="Black" BorderWidth="0.5" CornerRadius="0"/>
+
+
+        </FlexLayout>
+        <FlexLayout FlexLayout.Grow="0" HeightRequest="47.06" >
+
+            <!-- Content -->
+            <Button Text="DaDa1" />
+            <Button Text="DaDa2" />
+            <Button Text="DaDa3" />
+            <Button Text="DaDa4" />
+            <Button Text="DaDa5" />
+            <Button Text="DaDa6" />
+            <Button Text="DaDa7" />
+            <Button Text="DaDa8" />
+            <Button Text="DaDa9" />
+
+
+        </FlexLayout>
+        <FlexLayout FlexLayout.Grow="0" HeightRequest="47.06" >
+
+            <!-- Content -->
+            <Button Text="DaDa1" />
+            <Button Text="DaDa2" />
+            <Button Text="DaDa3" />
+            <Button Text="DaDa4" />
+            <Button Text="DaDa5" />
+            <Button Text="DaDa6" />
+            <Button Text="DaDa7" />
+            <Button Text="DaDa8" />
+            <Button Text="DaDa9" />
+
+
+        </FlexLayout>
+        <FlexLayout FlexLayout.Grow="0" HeightRequest="47.06" >
+
+            <!-- Content -->
+            <Button Text="DaDa1" />
+            <Button Text="DaDa2" />
+            <Button Text="DaDa3" />
+            <Button Text="DaDa4" />
+            <Button Text="DaDa5" />
+            <Button Text="DaDa6" />
+            <Button Text="DaDa7" />
+            <Button Text="DaDa8" />
+            <Button Text="DaDa9" />
+
+
+        </FlexLayout>
+        <FlexLayout FlexLayout.Grow="0" HeightRequest="47.06" >
+
+            <!-- Content -->
+            <Button Text="DaDa1" />
+            <Button Text="DaDa2" />
+            <Button Text="DaDa3" />
+            <Button Text="DaDa4" />
+            <Button Text="DaDa5" />
+            <Button Text="DaDa6" />
+            <Button Text="DaDa7" />
+            <Button Text="DaDa8" />
+            <Button Text="DaDa9" />
+
+
+        </FlexLayout>
+        <FlexLayout FlexLayout.Grow="0" HeightRequest="47.06" >
+
+            <!-- Content -->
+            <Button Text="DaDa1" />
+            <Button Text="DaDa2" />
+            <Button Text="DaDa3" />
+            <Button Text="DaDa4" />
+            <Button Text="DaDa5" />
+            <Button Text="DaDa6" />
+            <Button Text="DaDa7" />
+            <Button Text="DaDa8" />
+            <Button Text="DaDa9" />
+
+
+        </FlexLayout>
+        <FlexLayout FlexLayout.Grow="0" HeightRequest="47.06" >
+
+            <!-- Content -->
+            <Button Text="DaDa1" />
+            <Button Text="DaDa2" />
+            <Button Text="DaDa3" />
+            <Button Text="DaDa4" />
+            <Button Text="DaDa5" />
+            <Button Text="DaDa6" />
+            <Button Text="DaDa7" />
+            <Button Text="DaDa8" />
+            <Button Text="DaDa9" />
+
+
+        </FlexLayout>
+        <FlexLayout FlexLayout.Grow="0" HeightRequest="47.06" >
+
+            <!-- Content -->
+            <Button Text="DaDa1" />
+            <Button Text="DaDa2" />
+            <Button Text="DaDa3" />
+            <Button Text="DaDa4" />
+            <Button Text="DaDa5" />
+            <Button Text="DaDa6" />
+            <Button Text="DaDa7" />
+            <Button Text="DaDa8" />
+            <Button Text="DaDa9" />
+
+
+        </FlexLayout>
+        <FlexLayout FlexLayout.Grow="0" HeightRequest="47.06" >
+
+            <!-- Content -->
+            <Button Text="DaDa1" />
+            <Button Text="DaDa2" />
+            <Button Text="DaDa3" />
+            <Button Text="DaDa4" />
+            <Button Text="DaDa5" />
+            <Button Text="DaDa6" />
+            <Button Text="DaDa7" />
+            <Button Text="DaDa8" />
+            <Button Text="DaDa9" />
 
 
         </FlexLayout>
