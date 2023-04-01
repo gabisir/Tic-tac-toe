@@ -12,6 +12,10 @@
                TextColor="White"
                BackgroundColor="White"
                HorizontalTextAlignment="Center" />
+        <ImageButton x:Name="dada"
+                     Source="krizic.svg"
+                     Clicked="OnImageButtonClicked"
+                     HorizontalOptions="Center" />
         <!-- Body -->
         <FlexLayout FlexLayout.Grow="0" HeightRequest="47.06">
 

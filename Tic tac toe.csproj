@@ -48,4 +48,14 @@
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Remove="Resources\Images\empty.svg" />
+	  <None Remove="Resources\Images\krizic.svg" />
+	  <None Remove="Resources\Images\krizic45.svg" />
+	  <None Remove="Resources\Images\krizic90.svg" />
+	  <None Remove="Resources\Images\kruzic.svg" />
+	  <None Remove="Resources\Images\kruzic45.svg" />
+	  <None Remove="Resources\Images\kruzic90.svg" />
+	</ItemGroup>
+
 </Project>
