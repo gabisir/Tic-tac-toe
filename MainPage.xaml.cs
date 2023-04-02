@@ -19,9 +19,9 @@ public partial class MainPage : ContentPage
 	{
 		var button = (ImageButton)sender;
 		var classId = button.ClassId;
-		// This will give you the value / classId of your button which you'll press
-        
-		if (button.Source.ToString() != "File: empty.png") //provjerava jel na gumbu prazna slika ispisivo sam button.source is skonto sve
+        // This will give you the value / classId of your button which you'll press
+        //DisplayAlert("Alert", $"Zihh si klikno na {button.ClassId}", "OK");
+        if (button.Source.ToString() != "File: empty.png") //provjerava jel na gumbu prazna slika ispisivo sam button.source is skonto sve
         {
             DisplayAlert("Alert", "You made an illegal move", "OK");
             illegal = 1;
