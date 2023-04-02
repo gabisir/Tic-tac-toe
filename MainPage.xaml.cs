@@ -10,6 +10,7 @@ public partial class MainPage : ContentPage
     int illegal = 0;//zastavica koja se stavi na 1 ako je ilegalno
 	int prviPut = 1;
     int pobjeda = 0;
+    char who;
 
     private Border GetSectionBorder (int playfield)
     {
@@ -1001,6 +1002,79 @@ public partial class MainPage : ContentPage
                 GetSectionBorder(playfield_required - 1).StrokeThickness = 3;
 
             }
+
+            if(true)
+            {
+                if (array[0] == array[1] && array[1] == array[2])
+                {
+                if (array[0] == 1)
+                    who = 'o';
+                if (array[0] == 2)
+                    who = 'x';
+                }
+                if (array[3] == array[4] && array[4] == array[5])
+                {
+                    if (array[3] == 1)
+                        who = 'o';
+                    if (array[3] == 2)
+                        who = 'x';
+                }
+                if (array[6] == array[7] && array[7] == array[8])
+                {
+                    if (array[6] == 1)
+                        who = 'o';
+                    if (array[6] == 2)
+                        who = 'x';
+                }
+                if (array[0] == array[3] && array[3] == array[6])
+                {
+                    if (array[0] == 1)
+                        who = 'o';
+                    if (array[0] == 2)
+                        who = 'x';
+                }
+                if (array[1] == array[4] && array[4] == array[7])
+                {
+                    if (array[1] == 1)
+                        who = 'o';
+                    if (array[1] == 2)
+                        who = 'x';
+                }
+                if (array[2] == array[5] && array[5] == array[8])
+                {
+                    if (array[2] == 1)
+                        who = 'o';
+                    if (array[2] == 2)
+                        who = 'x';
+                }
+                if (array[0] == array[4] && array[4] == array[8])
+                {
+                    if (array[4] == 1)
+                        who = 'o';
+                    if (array[4] == 2)
+                        who = 'x';
+                }
+                if (array[2] == array[4] && array[4] == array[6])
+                {
+                    if (array[4] == 1)
+                        who = 'o';
+                    if (array[4] == 2)
+                        who = 'x';
+                }
+            }
+
+            if (who == 'x')
+            {
+                winner.Text = "Winner is x";
+                pobjeda = 1;
+            }
+                
+            if (who == 'o')
+            {
+                winner.Text = "Winner is o";
+                pobjeda = 1;
+            }
+
             illegal = 0;
             if (prviPut == 1) prviPut = 0;
 
