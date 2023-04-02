@@ -36,7 +36,7 @@ public partial class MainPage : ContentPage
             default: return PrviB;
         }
     }
-    private void SetImageOfWin (int playfield, int pobjedio)
+    private void SetImageOfWin (int playfield, char pobjedio)
     {
         if (pobjedio == '1')
         { //Kruzic pobjedio
@@ -145,7 +145,7 @@ public partial class MainPage : ContentPage
     private void Reset_button_clicked(object sender, EventArgs e)
     {
         //here goes reset;
-        count = 0;
+        count = 1;
         playfield = 0;
         playfield_required = 0;
         pobjeda = 0;
@@ -1065,13 +1065,13 @@ public partial class MainPage : ContentPage
 
             if (who == 'x')
             {
-                winner.Text = "Winner is x";
+                winner.Text = "The winner is: X";
                 pobjeda = 1;
             }
                 
             if (who == 'o')
             {
-                winner.Text = "Winner is o";
+                winner.Text = "The winner is: 0";
                 pobjeda = 1;
             }
 
