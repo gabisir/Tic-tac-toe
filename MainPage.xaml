@@ -325,6 +325,12 @@
             </Border>
 
         </Grid>
+        <Button
+            Text="RESET"
+            IsVisible="true"
+            Clicked="Reset_button_clicked"
+            
+            />
     </FlexLayout>
 
 </ContentPage>
