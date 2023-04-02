@@ -403,9 +403,9 @@ public partial class MainPage : ContentPage
                             if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
                             {
                                 if (field[i, j] == 'x')
-                                    array[3] = 2;
+                                    array[1] = 2;
                                 else if (field[i, j] == 'o')
-                                    array[3] = 1;
+                                    array[1] = 1;
                             }
                         }
                         if (j == 6)
@@ -413,9 +413,9 @@ public partial class MainPage : ContentPage
                             if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
                             {
                                 if (field[i, j] == 'x')
-                                    array[6] = 2;
+                                    array[2] = 2;
                                 else if (field[i, j] == 'o')
-                                    array[6] = 1;
+                                    array[2] = 1;
                             }
                         }
                     }
@@ -436,9 +436,9 @@ public partial class MainPage : ContentPage
                             if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
                             {
                                 if (field[i, j] == 'x')
-                                    array[3] = 2;
+                                    array[1] = 2;
                                 else if (field[i, j] == 'o')
-                                    array[3] = 1;
+                                    array[1] = 1;
                             }
                         }
                         if (j == 6)
@@ -446,9 +446,9 @@ public partial class MainPage : ContentPage
                             if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
                             {
                                 if (field[i, j] == 'x')
-                                    array[6] = 2;
+                                    array[2] = 2;
                                 else if (field[i, j] == 'o')
-                                    array[6] = 1;
+                                    array[2] = 1;
                             }
                         }
                     }
@@ -469,9 +469,42 @@ public partial class MainPage : ContentPage
                             if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
                             {
                                 if (field[i, j] == 'x')
-                                    array[3] = 2;
+                                    array[1] = 2;
                                 else if (field[i, j] == 'o')
-                                    array[3] = 1;
+                                    array[1] = 1;
+                            }
+                        }
+                        if (j == 6)
+                        {
+                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
+                            {
+                                if (field[i, j] == 'x')
+                                    array[2] = 2;
+                                else if (field[i, j] == 'o')
+                                    array[2] = 1;
+                            }
+                        }
+                    }
+                    if (i == 3)
+                    {
+                        if (j == 0)
+                        {
+                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
+                            {
+                                if (field[i, j] == 'x')
+                                    array[4] = 2;
+                                else if (field[i, j] == 'o')
+                                    array[4] = 1;
+                            }
+                        }
+                        if (j == 3)
+                        {
+                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
+                            {
+                                if (field[i, j] == 'x')
+                                    array[5] = 2;
+                                else if (field[i, j] == 'o')
+                                    array[5] = 1;
                             }
                         }
                         if (j == 6)
@@ -485,39 +518,6 @@ public partial class MainPage : ContentPage
                             }
                         }
                     }
-                    if (i == 3)
-                    {
-                        if (j == 0)
-                        {
-                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[1] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[1] = 1;
-                            }
-                        }
-                        if (j == 3)
-                        {
-                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[4] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[4] = 1;
-                            }
-                        }
-                        if (j == 6)
-                        {
-                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[7] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[7] = 1;
-                            }
-                        }
-                    }
                     if (i == 4)
                     {
                         if (j == 0)
@@ -525,75 +525,9 @@ public partial class MainPage : ContentPage
                             if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
                             {
                                 if (field[i, j] == 'x')
-                                    array[1] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[1] = 1;
-                            }
-                        }
-                        if (j == 3)
-                        {
-                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
-                            {
-                                if (field[i, j] == 'x')
                                     array[4] = 2;
                                 else if (field[i, j] == 'o')
                                     array[4] = 1;
-                            }
-                        }
-                        if (j == 6)
-                        {
-                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[7] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[7] = 1;
-                            }
-                        }
-                    }
-                    if (i == 5)
-                    {
-                        if (j == 0)
-                        {
-                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[1] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[1] = 1;
-                            }
-                        }
-                        if (j == 3)
-                        {
-                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[4] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[4] = 1;
-                            }
-                        }
-                        if (j == 6)
-                        {
-                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[7] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[7] = 1;
-                            }
-                        }
-                    }
-                    if (i == 6)
-                    {
-                        if (j == 0)
-                        {
-                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[2] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[2] = 1;
                             }
                         }
                         if (j == 3)
@@ -604,6 +538,72 @@ public partial class MainPage : ContentPage
                                     array[5] = 2;
                                 else if (field[i, j] == 'o')
                                     array[5] = 1;
+                            }
+                        }
+                        if (j == 6)
+                        {
+                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
+                            {
+                                if (field[i, j] == 'x')
+                                    array[6] = 2;
+                                else if (field[i, j] == 'o')
+                                    array[6] = 1;
+                            }
+                        }
+                    }
+                    if (i == 5)
+                    {
+                        if (j == 0)
+                        {
+                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
+                            {
+                                if (field[i, j] == 'x')
+                                    array[4] = 2;
+                                else if (field[i, j] == 'o')
+                                    array[4] = 1;
+                            }
+                        }
+                        if (j == 3)
+                        {
+                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
+                            {
+                                if (field[i, j] == 'x')
+                                    array[5] = 2;
+                                else if (field[i, j] == 'o')
+                                    array[5] = 1;
+                            }
+                        }
+                        if (j == 6)
+                        {
+                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
+                            {
+                                if (field[i, j] == 'x')
+                                    array[6] = 2;
+                                else if (field[i, j] == 'o')
+                                    array[6] = 1;
+                            }
+                        }
+                    }
+                    if (i == 6)
+                    {
+                        if (j == 0)
+                        {
+                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
+                            {
+                                if (field[i, j] == 'x')
+                                    array[6] = 2;
+                                else if (field[i, j] == 'o')
+                                    array[6] = 1;
+                            }
+                        }
+                        if (j == 3)
+                        {
+                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
+                            {
+                                if (field[i, j] == 'x')
+                                    array[7] = 2;
+                                else if (field[i, j] == 'o')
+                                    array[7] = 1;
                             }
                         }
                         if (j == 6)
@@ -624,9 +624,9 @@ public partial class MainPage : ContentPage
                             if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
                             {
                                 if (field[i, j] == 'x')
-                                    array[2] = 2;
+                                    array[6] = 2;
                                 else if (field[i, j] == 'o')
-                                    array[2] = 1;
+                                    array[6] = 1;
                             }
                         }
                         if (j == 3)
@@ -634,9 +634,9 @@ public partial class MainPage : ContentPage
                             if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
                             {
                                 if (field[i, j] == 'x')
-                                    array[5] = 2;
+                                    array[7] = 2;
                                 else if (field[i, j] == 'o')
-                                    array[5] = 1;
+                                    array[7] = 1;
                             }
                         }
                         if (j == 6)
@@ -657,9 +657,9 @@ public partial class MainPage : ContentPage
                             if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
                             {
                                 if (field[i, j] == 'x')
-                                    array[2] = 2;
+                                    array[6] = 2;
                                 else if (field[i, j] == 'o')
-                                    array[2] = 1;
+                                    array[6] = 1;
                             }
                         }
                         if (j == 3)
@@ -667,9 +667,9 @@ public partial class MainPage : ContentPage
                             if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
                             {
                                 if (field[i, j] == 'x')
-                                    array[5] = 2;
+                                    array[7] = 2;
                                 else if (field[i, j] == 'o')
-                                    array[5] = 1;
+                                    array[7] = 1;
                             }
                         }
                         if (j == 6)
