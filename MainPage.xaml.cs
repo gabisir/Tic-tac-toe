@@ -2,7 +2,7 @@
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;//0->x  1->y
+	int count = 1;//0->x  1->y
 	int playfield = 0;//racunamo u mainu u kojoj se sekciji nalazi kliknut gumb od 1 do 9  !!!!!   OVO JE MOZDA NEPOTREBNO  !!!!!
 	int playfield_required = 0; // definiramo di ce igrac morat igrat isto od 1 do 9 ali ako moze svugdje onda je 0
     int[] array = new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0}; //nerjeseno 3, x je pobjedio 2, o je pobjedio 1, niko jos nije pobjedio 0
@@ -31,12 +31,12 @@ public partial class MainPage : ContentPage
                 return OsmiB;
             case 8:
                 return DevetiB;
-            default: return null;
+            default: return PrviB;
         }
     }
     private void SetImageOfWin (int playfield, int pobjedio)
     {
-        if (pobjedio == 1)
+        if (pobjedio == '1')
         { //Kruzic pobjedio
             switch (playfield)
             {
@@ -69,7 +69,7 @@ public partial class MainPage : ContentPage
                     break;
             }
         }
-        if (pobjedio == 2)
+        if (pobjedio == '2')
         { //Krizic pobjedio
             switch (playfield)
             {
@@ -102,6 +102,39 @@ public partial class MainPage : ContentPage
                     break;
             }
         }
+        if (pobjedio == '9')
+        { //Cisti plocu
+            switch (playfield)
+            {
+                case 0:
+                    Img1.Source = "empty.png";
+                    break;
+                case 1:
+                    Img2.Source = "empty.png";
+                    break;
+                case 2:
+                    Img3.Source = "empty.png";
+                    break;
+                case 3:
+                    Img4.Source = "empty.png";
+                    break;
+                case 4:
+                    Img5.Source = "empty.png";
+                    break;
+                case 5:
+                    Img6.Source = "empty.png";
+                    break;
+                case 6:
+                    Img7.Source = "empty.png";
+                    break;
+                case 7:
+                    Img8.Source = "empty.png";
+                    break;
+                case 8:
+                    Img9.Source = "empty.png";
+                    break;
+            }
+        }
     }
     public MainPage()
 	{
@@ -120,6 +153,9 @@ public partial class MainPage : ContentPage
                 field[i, j] = '0';
         illegal = 0;
         prviPut = 1;
+        InitializeComponent();
+
+
     }
 
     private void EventClickedHandler(object sender, EventArgs e)
@@ -161,8 +197,10 @@ public partial class MainPage : ContentPage
 
         if (illegal==0)
 		{
-			//provjerava u kojoj se sekciji treba igrat iduci potez
-			if (classId == "11" || classId == "14" || classId == "17" || classId == "41" || classId == "44" || classId == "47" || classId == "71" || classId == "74" || classId == "77") { playfield_required = 1; }
+            GetSectionBorder(playfield_required - 1).Stroke = Color.FromArgb("#FF0000");
+            GetSectionBorder(playfield_required - 1).StrokeThickness = 1;
+            //provjerava u kojoj se sekciji treba igrat iduci potez
+            if (classId == "11" || classId == "14" || classId == "17" || classId == "41" || classId == "44" || classId == "47" || classId == "71" || classId == "74" || classId == "77") { playfield_required = 1; }
 			if (classId == "12" || classId == "15" || classId == "18" || classId == "42" || classId == "45" || classId == "48" || classId == "72" || classId == "75" || classId == "78") { playfield_required = 2; }
 			if (classId == "13" || classId == "16" || classId == "19" || classId == "43" || classId == "46" || classId == "49" || classId == "73" || classId == "76" || classId == "79") { playfield_required = 3; }
 			if (classId == "21" || classId == "24" || classId == "27" || classId == "51" || classId == "54" || classId == "57" || classId == "81" || classId == "84" || classId == "87") { playfield_required = 4; }
@@ -176,7 +214,7 @@ public partial class MainPage : ContentPage
 		//set image on button
         if (count == 0 && illegal==0)
 		{
-			count = 1;
+            count = 1;
 			button.Source = "kruzic.png";
 			field[(int)Char.GetNumericValue(classId[0]) - 1, (int)Char.GetNumericValue(classId[1]) - 1] = 'o';  //u polje cemo spremit x i o da lakse provjeravamo pobjede
 		}
@@ -939,11 +977,24 @@ public partial class MainPage : ContentPage
                 }
             }
 		}
-
+        for(int i = 0; i < 9; i++)
+        {
+            if (array[i] == 1)
+            {
+                SetImageOfWin(i, '1');
+            }
+            else if (array[i] == 2)
+            {
+                SetImageOfWin(i, '2');
+            }
+        }
 
 		if(illegal == 1)
 		{
             DisplayAlert("Alert", "playfield required= " + playfield_required, "OK");
+            GetSectionBorder(playfield_required -1 ).Stroke = Color.FromArgb("#0000FF");
+            GetSectionBorder(playfield_required - 1).StrokeThickness = 2;
+
         }
 		illegal = 0;
 		if (prviPut == 1) prviPut = 0;

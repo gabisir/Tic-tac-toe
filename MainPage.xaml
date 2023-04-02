@@ -7,10 +7,17 @@
     <FlexLayout Direction="Column" >
 
         <Label Text="Zlaja ako vidis ovo duzan si pivu"
-               FontSize="45"
+               FontSize="10"
                TextColor="White"
                BackgroundColor="White"
                HorizontalTextAlignment="Center" />
+        <Label x:Name="winner"
+               Text=""
+               FontSize="25"
+               TextColor="Black"
+               BackgroundColor="White"
+               HorizontalTextAlignment="Center" 
+               Margin="0, 0, 0, 10"/>
         <!-- Body -->
         <Grid HorizontalOptions="Center">
             <Grid.RowDefinitions>
@@ -327,7 +334,7 @@
         </Grid>
         <Button
             Text="RESET"
-            IsVisible="true"
+            IsVisible="false"
             Clicked="Reset_button_clicked"
             
             />
