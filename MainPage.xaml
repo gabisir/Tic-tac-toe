@@ -2,156 +2,132 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Tic_tac_toe.MainPage"
-             BackgroundColor="White"
-             >
+             BackgroundColor="White">
 
     <FlexLayout Direction="Column" >
 
         <Label Text="Zlaja ako vidis ovo duzan si pivu"
-               FontSize="10"
+               FontSize="45"
                TextColor="White"
                BackgroundColor="White"
                HorizontalTextAlignment="Center" />
-        <ImageButton x:Name="dada"
-                     Source="krizic.svg"
-                     Clicked="OnImageButtonClicked"
-                     HorizontalOptions="Center" />
-        <!-- Body -->
-        <FlexLayout FlexLayout.Grow="0" HeightRequest="47.06">
+                <!-- Body -->
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45.6" />
+                <RowDefinition Height="45.6" />
+                <RowDefinition Height="45.6" />
+                <RowDefinition Height="45.6" />
+                <RowDefinition Height="45.6" />
+                <RowDefinition Height="45.6" />
+                <RowDefinition Height="45.6" />
+                <RowDefinition Height="45.6" />
+                <RowDefinition Height="45.6" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="45.6" />
+                <ColumnDefinition Width="45.6" />
+                <ColumnDefinition Width="45.6" />
+                <ColumnDefinition Width="45.6" />
+                <ColumnDefinition Width="45.6" />
+                <ColumnDefinition Width="45.6" />
+                <ColumnDefinition Width="45.6" />
+                <ColumnDefinition Width="45.6" />
+                <ColumnDefinition Width="45.6" />
+            </Grid.ColumnDefinitions>
 
-            <!-- Content -->
-            <Button Text="DaDa1" BorderColor="Black" BorderWidth="0.5" CornerRadius="0"/>
-            <Button Text="DaDa2" BorderColor="Black" BorderWidth="0.5" CornerRadius="0"/>
-            <Button Text="DaDa3" BorderColor="Black" BorderWidth="0.5" CornerRadius="0"/>
-            <Button Text="DaDa4" BorderColor="Black" BorderWidth="0.5" CornerRadius="0"/>
-            <Button Text="DaDa5" BorderColor="Black" BorderWidth="0.5" CornerRadius="0"/>
-            <Button Text="DaDa6" BorderColor="Black" BorderWidth="0.5" CornerRadius="0"/>
-            <Button Text="DaDa7" BorderColor="Black" BorderWidth="0.5" CornerRadius="0"/>
-            <Button Text="DaDa8" BorderColor="Black" BorderWidth="0.5" CornerRadius="0"/>
-            <Button Text="DaDa9" BorderColor="Black" BorderWidth="0.5" CornerRadius="0"/>
+            <!-- row 1-->
+            <ImageButton x:Name="dada11" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="11" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="0" Grid.Column="0"/>
+            <ImageButton x:Name="dada12" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="12" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="0" Grid.Column="1"/>
+            <ImageButton x:Name="dada13" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="13" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="0" Grid.Column="2"/>
+            <ImageButton x:Name="dada14" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="14" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="0" Grid.Column="3"/>
+            <ImageButton x:Name="dada15" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="15" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="0" Grid.Column="4"/>
+            <ImageButton x:Name="dada16" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="16" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="0" Grid.Column="5"/>
+            <ImageButton x:Name="dada17" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="17" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="0" Grid.Column="6"/>
+            <ImageButton x:Name="dada18" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="18" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="0" Grid.Column="7"/>
+            <ImageButton x:Name="dada19" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="19" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="0" Grid.Column="8"/>
+            <!-- row 2-->                       
+            <ImageButton x:Name="dada21" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="21" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="1" Grid.Column="0"/>
+            <ImageButton x:Name="dada22" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="22" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="1" Grid.Column="1"/>
+            <ImageButton x:Name="dada23" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="23" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="1" Grid.Column="2"/>
+            <ImageButton x:Name="dada24" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="24" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="1" Grid.Column="3"/>
+            <ImageButton x:Name="dada25" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="25" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="1" Grid.Column="4"/>
+            <ImageButton x:Name="dada26" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="26" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="1" Grid.Column="5"/>
+            <ImageButton x:Name="dada27" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="27" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="1" Grid.Column="6"/>
+            <ImageButton x:Name="dada28" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="28" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="1" Grid.Column="7"/>
+            <ImageButton x:Name="dada29" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="29" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="1" Grid.Column="8"/>
+            <!-- row 3-->                       
+            <ImageButton x:Name="dada31" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="31" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="2" Grid.Column="0"/>
+            <ImageButton x:Name="dada32" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="32" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="2" Grid.Column="1"/>
+            <ImageButton x:Name="dada33" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="33" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="2" Grid.Column="2"/>
+            <ImageButton x:Name="dada34" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="34" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="2" Grid.Column="3"/>
+            <ImageButton x:Name="dada35" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="35" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="2" Grid.Column="4"/>
+            <ImageButton x:Name="dada36" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="36" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="2" Grid.Column="5"/>
+            <ImageButton x:Name="dada37" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="37" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="2" Grid.Column="6"/>
+            <ImageButton x:Name="dada38" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="38" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="2" Grid.Column="7"/>
+            <ImageButton x:Name="dada39" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="39" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="2" Grid.Column="8"/>
+            <!-- row 4-->                       
+            <ImageButton x:Name="dada41" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="41" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="3" Grid.Column="0"/>
+            <ImageButton x:Name="dada42" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="42" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="3" Grid.Column="1"/>
+            <ImageButton x:Name="dada43" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="43" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="3" Grid.Column="2"/>
+            <ImageButton x:Name="dada44" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="44" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="3" Grid.Column="3"/>
+            <ImageButton x:Name="dada45" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="45" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="3" Grid.Column="4"/>
+            <ImageButton x:Name="dada46" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="46" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="3" Grid.Column="5"/>
+            <ImageButton x:Name="dada47" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="47" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="3" Grid.Column="6"/>
+            <ImageButton x:Name="dada48" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="48" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="3" Grid.Column="7"/>
+            <ImageButton x:Name="dada49" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="49" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="3" Grid.Column="8"/>
+            <!-- row 5-->                       
+            <ImageButton x:Name="dada51" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="51" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="4" Grid.Column="0"/>
+            <ImageButton x:Name="dada52" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="52" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="4" Grid.Column="1"/>
+            <ImageButton x:Name="dada53" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="53" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="4" Grid.Column="2"/>
+            <ImageButton x:Name="dada54" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="54" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="4" Grid.Column="3"/>
+            <ImageButton x:Name="dada55" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="55" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="4" Grid.Column="4"/>
+            <ImageButton x:Name="dada56" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="56" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="4" Grid.Column="5"/>
+            <ImageButton x:Name="dada57" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="57" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="4" Grid.Column="6"/>
+            <ImageButton x:Name="dada58" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="58" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="4" Grid.Column="7"/>
+            <ImageButton x:Name="dada59" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="59" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="4" Grid.Column="8"/>
+            <!-- row 6-->                       
+            <ImageButton x:Name="dada61" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="61" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="5" Grid.Column="0"/>
+            <ImageButton x:Name="dada62" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="62" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="5" Grid.Column="1"/>
+            <ImageButton x:Name="dada63" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="63" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="5" Grid.Column="2"/>
+            <ImageButton x:Name="dada64" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="64" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="5" Grid.Column="3"/>
+            <ImageButton x:Name="dada65" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="65" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="5" Grid.Column="4"/>
+            <ImageButton x:Name="dada66" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="66" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="5" Grid.Column="5"/>
+            <ImageButton x:Name="dada67" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="67" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="5" Grid.Column="6"/>
+            <ImageButton x:Name="dada68" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="68" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="5" Grid.Column="7"/>
+            <ImageButton x:Name="dada69" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="69" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="5" Grid.Column="8"/>
+            <!-- row 7-->                       
+            <ImageButton x:Name="dada71" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="71" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="6" Grid.Column="0"/>
+            <ImageButton x:Name="dada72" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="72" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="6" Grid.Column="1"/>
+            <ImageButton x:Name="dada73" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="73" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="6" Grid.Column="2"/>
+            <ImageButton x:Name="dada74" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="74" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="6" Grid.Column="3"/>
+            <ImageButton x:Name="dada75" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="75" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="6" Grid.Column="4"/>
+            <ImageButton x:Name="dada76" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="76" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="6" Grid.Column="5"/>
+            <ImageButton x:Name="dada77" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="77" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="6" Grid.Column="6"/>
+            <ImageButton x:Name="dada78" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="78" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="6" Grid.Column="7"/>
+            <ImageButton x:Name="dada79" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="79" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="6" Grid.Column="8"/>
+            <!-- row 8-->                       
+            <ImageButton x:Name="dada81" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="81" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="7" Grid.Column="0"/>
+            <ImageButton x:Name="dada82" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="82" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="7" Grid.Column="1"/>
+            <ImageButton x:Name="dada83" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="83" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="7" Grid.Column="2"/>
+            <ImageButton x:Name="dada84" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="84" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="7" Grid.Column="3"/>
+            <ImageButton x:Name="dada85" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="85" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="7" Grid.Column="4"/>
+            <ImageButton x:Name="dada86" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="86" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="7" Grid.Column="5"/>
+            <ImageButton x:Name="dada87" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="87" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="7" Grid.Column="6"/>
+            <ImageButton x:Name="dada88" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="88" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="7" Grid.Column="7"/>
+            <ImageButton x:Name="dada89" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="89" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="7" Grid.Column="8"/>
+            <!-- row 9-->                       
+            <ImageButton x:Name="dada91" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="91" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="8" Grid.Column="0"/>
+            <ImageButton x:Name="dada92" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="92" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="8" Grid.Column="1"/>
+            <ImageButton x:Name="dada93" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="93" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="8" Grid.Column="2"/>
+            <ImageButton x:Name="dada94" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="94" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="8" Grid.Column="3"/>
+            <ImageButton x:Name="dada95" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="95" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="8" Grid.Column="4"/>
+            <ImageButton x:Name="dada96" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="96" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="8" Grid.Column="5"/>
+            <ImageButton x:Name="dada97" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="97" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="8" Grid.Column="6"/>
+            <ImageButton x:Name="dada98" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="98" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="8" Grid.Column="7"/>
+            <ImageButton x:Name="dada99" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="99" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="8" Grid.Column="8"/>
 
-
-        </FlexLayout>
-        <FlexLayout FlexLayout.Grow="0" HeightRequest="47.06" >
-
-            <!-- Content -->
-            <Button Text="DaDa1" />
-            <Button Text="DaDa2" />
-            <Button Text="DaDa3" />
-            <Button Text="DaDa4" />
-            <Button Text="DaDa5" />
-            <Button Text="DaDa6" />
-            <Button Text="DaDa7" />
-            <Button Text="DaDa8" />
-            <Button Text="DaDa9" />
-
-
-        </FlexLayout>
-        <FlexLayout FlexLayout.Grow="0" HeightRequest="47.06" >
-
-            <!-- Content -->
-            <Button Text="DaDa1" />
-            <Button Text="DaDa2" />
-            <Button Text="DaDa3" />
-            <Button Text="DaDa4" />
-            <Button Text="DaDa5" />
-            <Button Text="DaDa6" />
-            <Button Text="DaDa7" />
-            <Button Text="DaDa8" />
-            <Button Text="DaDa9" />
-
-
-        </FlexLayout>
-        <FlexLayout FlexLayout.Grow="0" HeightRequest="47.06" >
-
-            <!-- Content -->
-            <Button Text="DaDa1" />
-            <Button Text="DaDa2" />
-            <Button Text="DaDa3" />
-            <Button Text="DaDa4" />
-            <Button Text="DaDa5" />
-            <Button Text="DaDa6" />
-            <Button Text="DaDa7" />
-            <Button Text="DaDa8" />
-            <Button Text="DaDa9" />
-
-
-        </FlexLayout>
-        <FlexLayout FlexLayout.Grow="0" HeightRequest="47.06" >
-
-            <!-- Content -->
-            <Button Text="DaDa1" />
-            <Button Text="DaDa2" />
-            <Button Text="DaDa3" />
-            <Button Text="DaDa4" />
-            <Button Text="DaDa5" />
-            <Button Text="DaDa6" />
-            <Button Text="DaDa7" />
-            <Button Text="DaDa8" />
-            <Button Text="DaDa9" />
-
-
-        </FlexLayout>
-        <FlexLayout FlexLayout.Grow="0" HeightRequest="47.06" >
-
-            <!-- Content -->
-            <Button Text="DaDa1" />
-            <Button Text="DaDa2" />
-            <Button Text="DaDa3" />
-            <Button Text="DaDa4" />
-            <Button Text="DaDa5" />
-            <Button Text="DaDa6" />
-            <Button Text="DaDa7" />
-            <Button Text="DaDa8" />
-            <Button Text="DaDa9" />
-
-
-        </FlexLayout>
-        <FlexLayout FlexLayout.Grow="0" HeightRequest="47.06" >
-
-            <!-- Content -->
-            <Button Text="DaDa1" />
-            <Button Text="DaDa2" />
-            <Button Text="DaDa3" />
-            <Button Text="DaDa4" />
-            <Button Text="DaDa5" />
-            <Button Text="DaDa6" />
-            <Button Text="DaDa7" />
-            <Button Text="DaDa8" />
-            <Button Text="DaDa9" />
-
-
-        </FlexLayout>
-        <FlexLayout FlexLayout.Grow="0" HeightRequest="47.06" >
-
-            <!-- Content -->
-            <Button Text="DaDa1" />
-            <Button Text="DaDa2" />
-            <Button Text="DaDa3" />
-            <Button Text="DaDa4" />
-            <Button Text="DaDa5" />
-            <Button Text="DaDa6" />
-            <Button Text="DaDa7" />
-            <Button Text="DaDa8" />
-            <Button Text="DaDa9" />
-
-
-        </FlexLayout>
-        <FlexLayout FlexLayout.Grow="0" HeightRequest="47.06" >
-
-            <!-- Content -->
-            <Button Text="DaDa1" />
-            <Button Text="DaDa2" />
-            <Button Text="DaDa3" />
-            <Button Text="DaDa4" />
-            <Button Text="DaDa5" />
-            <Button Text="DaDa6" />
-            <Button Text="DaDa7" />
-            <Button Text="DaDa8" />
-            <Button Text="DaDa9" />
-
-
-        </FlexLayout>
+        </Grid>
 
     </FlexLayout>
 
