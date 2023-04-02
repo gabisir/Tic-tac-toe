@@ -15,8 +15,22 @@ public partial class MainPage : ContentPage
 	{
 		InitializeComponent();
 	}
-	
-	private void EventClickedHandler(object sender, EventArgs e)
+    private void Reset_button_clicked(object sender, EventArgs e)
+    {
+        //here goes reset;
+        count = 0;
+        playfield = 0;
+        playfield_required = 0;
+        for (int i = 0; i < array.Length; i++)
+            array[i] = 0;
+        for (int i = 0; i < array.Length; i++)
+            for (int j = 0; j < array.Length; j++)
+                field[i, j] = '0';
+        illegal = 0;
+        prviPut = 1;
+    }
+
+    private void EventClickedHandler(object sender, EventArgs e)
 	{
 		var button = (ImageButton)sender;
 		var classId = button.ClassId;
@@ -41,7 +55,7 @@ public partial class MainPage : ContentPage
 		}
 		if(playfield_required!=0)
 		{
-			if (array[playfield_required - 1] == 1)
+			if (array[playfield_required - 1] != 0)
 				playfield_required = 0;
 		}
         
@@ -833,7 +847,6 @@ public partial class MainPage : ContentPage
                 }
             }
 		}
-		
 
 
 		if(illegal == 1)
