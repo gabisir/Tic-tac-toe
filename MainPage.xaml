@@ -23,14 +23,20 @@
                 <ColumnDefinition Width="136.8" />
                 <ColumnDefinition Width="136.8" />
             </Grid.ColumnDefinitions>
+            <Image x:Name="Img1"
+                   Grid.Row="0" Grid.Column="0"    
+                   Source="empty.png"
+                   Aspect="AspectFill"/>
             <Border
+                x:Name="PrviB"
                 Grid.Row="0" Grid.Column="0"
                 BackgroundColor="Transparent"
                 Stroke="Red"
                 StrokeThickness="1"
                 Margin="-1">
-
+                    
                 <Grid x:Name="Prvi" Grid.Row="0" Grid.Column="0">
+                    
                     <Grid.RowDefinitions>
                         <RowDefinition Height="45.6" />
                         <RowDefinition Height="45.6" />
@@ -50,9 +56,15 @@
                     <ImageButton x:Name="dada31" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="31" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="2" Grid.Column="0"/>
                     <ImageButton x:Name="dada32" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="32" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="2" Grid.Column="1"/>
                     <ImageButton x:Name="dada33" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="33" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="2" Grid.Column="2"/>
+                    
                 </Grid>
             </Border>
+            <Image x:Name="Img2"
+                   Grid.Row="0" Grid.Column="1"
+                   Source="empty.png"
+                   Aspect="AspectFill"/>
             <Border
+                x:Name="DrugiB"
                 Grid.Row="0" Grid.Column="1"
                 BackgroundColor="Transparent"
                 Stroke="Red"
@@ -80,7 +92,12 @@
                     <ImageButton x:Name="dada36" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="36" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="2" Grid.Column="2"/>
                 </Grid>
             </Border>
+            <Image x:Name="Img3"
+                   Grid.Row="0" Grid.Column="2"
+                   Source="empty.png"
+                   Aspect="AspectFill"/>
             <Border
+                x:Name="TreciB"
                 Grid.Row="0" Grid.Column="2"
                 BackgroundColor="Transparent"
                 Stroke="Red"
@@ -108,7 +125,12 @@
                     <ImageButton x:Name="dada39" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="39" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="2" Grid.Column="2"/>
                 </Grid>
             </Border>
+            <Image x:Name="Img4"
+                   Grid.Row="1" Grid.Column="0"
+                   Source="empty.png"
+                   Aspect="AspectFill"/>
             <Border
+                x:Name="CetvrtiB"
                 Grid.Row="1" Grid.Column="0"
                 BackgroundColor="Transparent"
                 Stroke="Red"
@@ -136,8 +158,12 @@
                     <ImageButton x:Name="dada63" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="63" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="2" Grid.Column="2"/>
                 </Grid>
             </Border>
-
+            <Image x:Name="Img5"
+                   Grid.Row="1" Grid.Column="1"
+                   Source="empty.png"
+                   Aspect="AspectFill"/>
             <Border
+                x:Name="PetiB"
                 Grid.Row="1" Grid.Column="1"
                 BackgroundColor="Transparent"
                 Stroke="Red"
@@ -165,7 +191,12 @@
                     <ImageButton x:Name="dada66" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="66" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="2" Grid.Column="2"/>
                 </Grid>
             </Border>
+            <Image x:Name="Img6"
+                   Grid.Row="1" Grid.Column="2"
+                   Source="empty.png"
+                   Aspect="AspectFill"/>
             <Border
+                x:Name="SestiB"
                 Grid.Row="1" Grid.Column="2"
                 BackgroundColor="Transparent"
                 Stroke="Red"
@@ -193,7 +224,12 @@
                     <ImageButton x:Name="dada69" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="69" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="2" Grid.Column="2"/>
                 </Grid>
             </Border>
+            <Image x:Name="Img7"
+                   Grid.Row="2" Grid.Column="0"
+                   Source="empty.png"
+                   Aspect="AspectFill"/>
             <Border
+                x:Name="SedmiB"
                 Grid.Row="2" Grid.Column="0"
                 BackgroundColor="Transparent"
                 Stroke="Red"
@@ -221,7 +257,12 @@
                     <ImageButton x:Name="dada93" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="93" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="2" Grid.Column="2"/>
                 </Grid>
             </Border>
+            <Image x:Name="Img8"
+                   Grid.Row="2" Grid.Column="1"
+                   Source="empty.png"
+                   Aspect="AspectFill"/>
             <Border
+                x:Name="OsmiB"
                 Grid.Row="2" Grid.Column="1"
                 BackgroundColor="Transparent"
                 Stroke="Red"
@@ -249,7 +290,12 @@
                     <ImageButton x:Name="dada96" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="96" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="2" Grid.Column="2"/>
                 </Grid>
             </Border>
+            <Image x:Name="Img9"
+                   Grid.Row="2" Grid.Column="2"
+                   Source="empty.png"
+                   Aspect="AspectFill"/>
             <Border
+                x:Name="DevetiB"
                 Grid.Row="2" Grid.Column="2"
                 BackgroundColor="Transparent"
                 Stroke="Red"

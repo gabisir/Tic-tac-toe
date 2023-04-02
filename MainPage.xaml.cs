@@ -1,6 +1,4 @@
-﻿using GoogleGson;
-
-namespace Tic_tac_toe;
+﻿namespace Tic_tac_toe;
 
 public partial class MainPage : ContentPage
 {
@@ -11,7 +9,101 @@ public partial class MainPage : ContentPage
     char[,] field = new char[9, 9];
     int illegal = 0;//zastavica koja se stavi na 1 ako je ilegalno
 	int prviPut = 1;
-	public MainPage()
+
+    private Border GetSectionBorder (int playfield)
+    {
+        switch(playfield) {
+            case 0:
+                return PrviB;
+            case 1:
+                return DrugiB;
+            case 2:
+                return TreciB;
+            case 3:
+                return CetvrtiB;
+            case 4:
+                return PetiB;
+            case 5:
+                return SestiB;
+            case 6:
+                return SedmiB;
+            case 7:
+                return OsmiB;
+            case 8:
+                return DevetiB;
+            default: return null;
+        }
+    }
+    private void SetImageOfWin (int playfield, int pobjedio)
+    {
+        if (pobjedio == 1)
+        { //Kruzic pobjedio
+            switch (playfield)
+            {
+                case 0:
+                    Img1.Source = "kruzic.png";
+                    break;
+                case 1:
+                    Img2.Source = "kruzic.png";
+                    break;
+                case 2:
+                    Img3.Source = "kruzic.png";
+                    break;
+                case 3:
+                    Img4.Source = "kruzic.png";
+                    break;
+                case 4:
+                    Img5.Source = "kruzic.png";
+                    break;
+                case 5:
+                    Img6.Source = "kruzic.png";
+                    break;
+                case 6:
+                    Img7.Source = "kruzic.png";
+                    break;
+                case 7:
+                    Img8.Source = "kruzic.png";
+                    break;
+                case 8:
+                    Img9.Source = "kruzic.png";
+                    break;
+            }
+        }
+        if (pobjedio == 2)
+        { //Krizic pobjedio
+            switch (playfield)
+            {
+                case 0:
+                    Img1.Source = "krizic.png";
+                    break;
+                case 1:
+                    Img2.Source = "krizic.png";
+                    break;
+                case 2:
+                    Img3.Source = "krizic.png";
+                    break;
+                case 3:
+                    Img4.Source = "krizic.png";
+                    break;
+                case 4:
+                    Img5.Source = "krizic.png";
+                    break;
+                case 5:
+                    Img6.Source = "krizic.png";
+                    break;
+                case 6:
+                    Img7.Source = "krizic.png";
+                    break;
+                case 7:
+                    Img8.Source = "krizic.png";
+                    break;
+                case 8:
+                    Img9.Source = "krizic.png";
+                    break;
+            }
+        }
+    }
+    public MainPage()
 	{
 		InitializeComponent();
 	}
