@@ -149,10 +149,10 @@ public partial class MainPage : ContentPage
         playfield = 0;
         playfield_required = 0;
         pobjeda = 0;
-        for (int i = 0; i < array.Length; i++)
+        for (int i = 0; i < 9; i++)
             array[i] = 0;
-        for (int i = 0; i < array.Length; i++)
-            for (int j = 0; j < array.Length; j++)
+        for (int i = 0; i < 9; i++)
+            for (int j = 0; j < 9; j++)
                 field[i, j] = '0';
         illegal = 0;
         prviPut = 1;
@@ -1067,12 +1067,14 @@ public partial class MainPage : ContentPage
             {
                 winner.Text = "The winner is: X";
                 pobjeda = 1;
+                reset.IsVisible = true;
             }
                 
             if (who == 'o')
             {
                 winner.Text = "The winner is: 0";
                 pobjeda = 1;
+                reset.IsVisible = true;
             }
 
             illegal = 0;

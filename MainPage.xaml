@@ -333,6 +333,7 @@
 
         </Grid>
         <Button
+            x:Name="reset"
             Text="RESET"
             IsVisible="false"
             Clicked="Reset_button_clicked"
