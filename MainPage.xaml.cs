@@ -185,6 +185,8 @@ public partial class MainPage : ContentPage
 
          all in all nije tesko al je zajebano i mislim zavrsit kad se vratim s treninga jedino kaj mi trebas objasnit kak to radi
         od ovog u biljeskama jer meni nije bas sve to jasno
+        
+         btw reset meni radi kad debuggam ali nisam siguran jel radi bez debbug nacina
         */
 
         //button.BorderColor = Color.FromArgb("#FF0000FF");
@@ -199,7 +201,11 @@ public partial class MainPage : ContentPage
             }
             if(illegal==0)
             {
-                
+
+
+                //tu bi stavio ako je prazno polje odabrano nek stavi border na gumb 
+
+
             }
             if (illegal == 0)
             {
