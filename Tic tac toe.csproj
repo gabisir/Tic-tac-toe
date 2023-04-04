@@ -30,6 +30,7 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
 		<Platforms>AnyCPU;x64</Platforms>
 		<DefaultLanguage>en</DefaultLanguage>
+		<DefaultLanguage>en</DefaultLanguage>
 		<GenerateAppInstallerFile>True</GenerateAppInstallerFile>
 		<AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
 		<PackageCertificateThumbprint>4EB351F745128D5A4C15FA6BE9B39E8823D0C3F5</PackageCertificateThumbprint>
