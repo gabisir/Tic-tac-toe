@@ -170,7 +170,7 @@ public partial class MainPage : ContentPage
                 if (tempButt != null)
                 {
                     tempButt.Source = "empty.png";
-                    tempButt.BackgroundColor = Color.FromArgb("#00FFFFFF");
+                    tempButt.BackgroundColor = Color.FromArgb("#00FFFFFE");
                 }
             }
         }
@@ -1130,7 +1130,7 @@ public partial class MainPage : ContentPage
             }
             if (illegal == 0)
             {
-                if (lastButton != null) lastButton.BackgroundColor = Color.FromArgb("#00FFFFFF");
+                if (lastButton != null) lastButton.BackgroundColor = Color.FromArgb("#00FFFFFE");
                 button.BackgroundColor = Color.FromArgb("#4000FFFF");//ovo je neki pokusaj stavljanja bordera -rjeseno
                 lastButton = button;
             }

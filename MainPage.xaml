@@ -2,20 +2,20 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Tic_tac_toe.MainPage"
-             BackgroundColor="White">
+             BackgroundColor="#FFFFFE">
 
     <FlexLayout Direction="Column" >
 
         <Label Text="Zlaja ako vidis ovo duzan si pivu"
                FontSize="10"
-               TextColor="White"
-               BackgroundColor="White"
+               TextColor="#FFFFFE"
+               BackgroundColor="#FFFFFE"
                HorizontalTextAlignment="Center" />
         <Label x:Name="winner"
                Text=""
                FontSize="25"
                TextColor="Black"
-               BackgroundColor="White"
+               BackgroundColor="#FFFFFE"
                HorizontalTextAlignment="Center" 
                Margin="0, 0, 0, 10"/>
         <!-- Body -->
@@ -342,6 +342,13 @@
                    Aspect="AspectFill"/>
 
         </Grid>
+        <Label
+            Margin="0, 20, 0, 0"
+            HorizontalOptions="Center"
+            TextColor="Black"
+            TextDecorations="Underline"
+            FontAttributes="Bold"
+            Text="(Pazi, neam undo ako slucajno kliknete reset tijekom partije!!!)"></Label>
         <Button
             x:Name="reset"
             Text="RESET"
