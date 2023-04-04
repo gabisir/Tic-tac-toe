@@ -1128,12 +1128,6 @@ public partial class MainPage : ContentPage
                 pobjeda = 1;
                 reset.IsVisible = true;
             }
-            if(illegal==0)
-            {
-                //stavi border na zadnji gumb kliknut
-
-
-            }
             if (illegal == 0)
             {
                 if (lastButton != null) lastButton.BackgroundColor = Color.FromArgb("#00FFFFFF");
