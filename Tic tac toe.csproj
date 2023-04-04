@@ -83,6 +83,7 @@
 	  <None Remove="Resources\Images\krizic.svg" />
 	  <None Remove="Resources\Images\krizic45.svg" />
 	  <None Remove="Resources\Images\krizic90.svg" />
+	  <None Remove="Resources\Images\kruzic.png" />
 	  <None Remove="Resources\Images\kruzic.svg" />
 	  <None Remove="Resources\Images\kruzic45.svg" />
 	  <None Remove="Resources\Images\kruzic90.svg" />

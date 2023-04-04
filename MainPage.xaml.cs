@@ -15,6 +15,7 @@ public partial class MainPage : ContentPage
 	int prviPut = 1;
     int pobjeda = 0;
     char who;
+    ImageButton lastButton = null;
 
     private Border GetSectionBorder (int playfield)
     {
@@ -160,16 +161,27 @@ public partial class MainPage : ContentPage
                 field[i, j] = '0';
         illegal = 0;
         prviPut = 1;
-        InitializeComponent();
-
-
+        ImageButton lastButton = null;
+        for(int i = 0; i < 9; i++)
+        {
+            for(int j = 0; j < 9; j++)
+            {
+                ImageButton tempButt = (ImageButton)FindByName($"dada{i}{j}".ToString());
+                if (tempButt != null)
+                {
+                    tempButt.Source = "empty.png";
+                    tempButt.BackgroundColor = Color.FromArgb("#00FFFFFF");
+                }
+            }
+        }
     }
 
     private void EventClickedHandler(object sender, EventArgs e)
 	{
 		var button = (ImageButton)sender;
 		var classId = button.ClassId;
-        button.BorderColor = Color.FromRgb(200, 120, 221);//ovo je neki pokusaj stavljanja bordera
+
+        
         //biljeske
         /*
          probo sam border na samo jedan gumb, nije islo
@@ -238,6 +250,7 @@ public partial class MainPage : ContentPage
             {
                 GetSectionBorder(playfield_required - 1).Stroke = Color.FromArgb("#FF0000");
                 GetSectionBorder(playfield_required - 1).StrokeThickness = 1;
+                GetSectionBorder(playfield_required - 1).Margin = -1;
                 //provjerava u kojoj se sekciji treba igrat iduci potez
                 if (classId == "11" || classId == "14" || classId == "17" || classId == "41" || classId == "44" || classId == "47" || classId == "71" || classId == "74" || classId == "77") { playfield_required = 1; }
                 if (classId == "12" || classId == "15" || classId == "18" || classId == "42" || classId == "45" || classId == "48" || classId == "72" || classId == "75" || classId == "78") { playfield_required = 2; }
@@ -1039,6 +1052,7 @@ public partial class MainPage : ContentPage
                 //DisplayAlert("Alert", "playfield required= " + playfield_required, "OK");
                 GetSectionBorder(playfield_required - 1).Stroke = Color.FromArgb("#0000FF");
                 GetSectionBorder(playfield_required - 1).StrokeThickness = 3;
+                GetSectionBorder(playfield_required - 1).Margin = -3;
             }
 
             if(true)
@@ -1119,6 +1133,12 @@ public partial class MainPage : ContentPage
                 //stavi border na zadnji gumb kliknut
 
 
+            }
+            if (illegal == 0)
+            {
+                if (lastButton != null) lastButton.BackgroundColor = Color.FromArgb("#00FFFFFF");
+                button.BackgroundColor = Color.FromArgb("#4000FFFF");//ovo je neki pokusaj stavljanja bordera -rjeseno
+                lastButton = button;
             }
             illegal = 0;
             if (prviPut == 1) prviPut = 0;

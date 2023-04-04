@@ -30,10 +30,7 @@
                 <ColumnDefinition Width="136.8" />
                 <ColumnDefinition Width="136.8" />
             </Grid.ColumnDefinitions>
-            <Image x:Name="Img1"
-                   Grid.Row="0" Grid.Column="0"    
-                   Source="empty.png"
-                   Aspect="AspectFill"/>
+            
             <Border
                 x:Name="PrviB"
                 Grid.Row="0" Grid.Column="0"
@@ -66,8 +63,9 @@
                     
                 </Grid>
             </Border>
-            <Image x:Name="Img2"
-                   Grid.Row="0" Grid.Column="1"
+            <Image x:Name="Img1"
+                   Opacity="0.5"
+                   Grid.Row="0" Grid.Column="0"    
                    Source="empty.png"
                    Aspect="AspectFill"/>
             <Border
@@ -99,9 +97,10 @@
                     <ImageButton x:Name="dada36" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="36" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="2" Grid.Column="2"/>
                 </Grid>
             </Border>
-            <Image x:Name="Img3"
-                   Grid.Row="0" Grid.Column="2"
+            <Image x:Name="Img2"
+                   Grid.Row="0" Grid.Column="1"
                    Source="empty.png"
+                   Opacity="0.5"
                    Aspect="AspectFill"/>
             <Border
                 x:Name="TreciB"
@@ -132,9 +131,10 @@
                     <ImageButton x:Name="dada39" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="39" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="2" Grid.Column="2"/>
                 </Grid>
             </Border>
-            <Image x:Name="Img4"
-                   Grid.Row="1" Grid.Column="0"
+            <Image x:Name="Img3"
+                   Grid.Row="0" Grid.Column="2"
                    Source="empty.png"
+                   Opacity="0.5"
                    Aspect="AspectFill"/>
             <Border
                 x:Name="CetvrtiB"
@@ -165,9 +165,10 @@
                     <ImageButton x:Name="dada63" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="63" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="2" Grid.Column="2"/>
                 </Grid>
             </Border>
-            <Image x:Name="Img5"
-                   Grid.Row="1" Grid.Column="1"
+            <Image x:Name="Img4"
+                   Grid.Row="1" Grid.Column="0"
                    Source="empty.png"
+                   Opacity="0.5"
                    Aspect="AspectFill"/>
             <Border
                 x:Name="PetiB"
@@ -198,9 +199,10 @@
                     <ImageButton x:Name="dada66" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="66" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="2" Grid.Column="2"/>
                 </Grid>
             </Border>
-            <Image x:Name="Img6"
-                   Grid.Row="1" Grid.Column="2"
+            <Image x:Name="Img5"
+                   Grid.Row="1" Grid.Column="1"
                    Source="empty.png"
+                   Opacity="0.5"
                    Aspect="AspectFill"/>
             <Border
                 x:Name="SestiB"
@@ -231,9 +233,10 @@
                     <ImageButton x:Name="dada69" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="69" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="2" Grid.Column="2"/>
                 </Grid>
             </Border>
-            <Image x:Name="Img7"
-                   Grid.Row="2" Grid.Column="0"
+            <Image x:Name="Img6"
+                   Grid.Row="1" Grid.Column="2"
                    Source="empty.png"
+                   Opacity="0.5"
                    Aspect="AspectFill"/>
             <Border
                 x:Name="SedmiB"
@@ -264,9 +267,10 @@
                     <ImageButton x:Name="dada93" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="93" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="2" Grid.Column="2"/>
                 </Grid>
             </Border>
-            <Image x:Name="Img8"
-                   Grid.Row="2" Grid.Column="1"
+            <Image x:Name="Img7"
+                   Grid.Row="2" Grid.Column="0"
                    Source="empty.png"
+                   Opacity="0.5"
                    Aspect="AspectFill"/>
             <Border
                 x:Name="OsmiB"
@@ -297,9 +301,10 @@
                     <ImageButton x:Name="dada96" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="96" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="2" Grid.Column="2"/>
                 </Grid>
             </Border>
-            <Image x:Name="Img9"
-                   Grid.Row="2" Grid.Column="2"
+            <Image x:Name="Img8"
+                   Grid.Row="2" Grid.Column="1"
                    Source="empty.png"
+                   Opacity="0.5"
                    Aspect="AspectFill"/>
             <Border
                 x:Name="DevetiB"
@@ -330,12 +335,17 @@
                     <ImageButton x:Name="dada99" Source="empty.png" HeightRequest="45.6" WidthRequest="45.6" Clicked="EventClickedHandler" ClassId="99" HorizontalOptions="Center" BorderColor="Black" BorderWidth="0.5" CornerRadius="0" Grid.Row="2" Grid.Column="2"/>
                 </Grid>
             </Border>
+            <Image x:Name="Img9"
+                   Grid.Row="2" Grid.Column="2"
+                   Opacity="0.5"
+                   Source="empty.png"
+                   Aspect="AspectFill"/>
 
         </Grid>
         <Button
             x:Name="reset"
             Text="RESET"
-            IsVisible="false"
+            IsVisible="true"
             Clicked="Reset_button_clicked"
             
             />
