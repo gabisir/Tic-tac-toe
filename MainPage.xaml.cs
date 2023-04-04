@@ -1,4 +1,8 @@
-﻿namespace Tic_tac_toe;
+﻿//using GameController;
+
+//using GameController;
+
+namespace Tic_tac_toe;
 
 public partial class MainPage : ContentPage
 {
@@ -165,6 +169,25 @@ public partial class MainPage : ContentPage
 	{
 		var button = (ImageButton)sender;
 		var classId = button.ClassId;
+        button.BorderColor = Color.FromRgb(200, 120, 221);//ovo je neki pokusaj stavljanja bordera
+        //biljeske
+        /*
+         probo sam border na samo jedan gumb, nije islo
+
+         trebo bi poslje treninga stavit array[] da moze bit 4 ako je playfield[] pun, da se moze igrat svudgje, a za to 
+         mi treba nekak stanje svih gumbi u playfieldu kaj bi mogo na zgance ali ne zelim ako nije neptorebno (trebam ideju)
+
+         treba onaj regex stavit na ifove u onoj provjeri za win tak da ne promjeni nista nego samo doda provjeru dal je 
+         array na tom mjestu vec neko pobjedio da nebi prebriso pobjedu.
+        
+         osim toga zakomentirano je gore skroz na vrhu " //using GameController; " jer nije htjelo vrtit kod sa tim, a poslje
+         se jos i samo generiralo  nakon nekog vremena, to mi je sumljivo
+
+         all in all nije tesko al je zajebano i mislim zavrsit kad se vratim s treninga jedino kaj mi trebas objasnit kak to radi
+        od ovog u biljeskama jer meni nije bas sve to jasno
+        */
+
+        //button.BorderColor = Color.FromArgb("#FF0000FF");
 
         if (pobjeda == 0)
         {
@@ -173,6 +196,10 @@ public partial class MainPage : ContentPage
             if (button.Source.ToString() != "File: empty.png") //provjerava jel na gumbu prazna slika ispisivo sam button.source is skonto sve
             {
                 illegal = 1;
+            }
+            if(illegal==0)
+            {
+                
             }
             if (illegal == 0)
             {
@@ -230,779 +257,782 @@ public partial class MainPage : ContentPage
                 button.Source = "krizic.png";
                 field[(int)Char.GetNumericValue(classId[0]) - 1, (int)Char.GetNumericValue(classId[1]) - 1] = 'x'; //nacin spremanja u char 2d polje je polje[x,y]=z;
             }
-
+            
             //check for a win
-            for (int i = 0; i < 9; i++)
+            if(illegal==0)
             {
-                for (int j = 0; j < 9; j++)
+                for (int i = 0; i < 9; i++)
                 {
-                    //3 provjere po glavnoj dijagonali
-                    if (i == j && i == 0)
-                        if (field[i, j] == field[i + 1, j + 1] && field[i, j] == field[i + 2, j + 2])
-                        {
-                            if (field[i, j] == 'x')
-                                array[0] = 2;
-                            else if (field[i, j] == 'o')
-                                array[0] = 1;
-                        }
-                    if (i == j && i == 3)
-                        if (field[i, j] == field[i + 1, j + 1] && field[i, j] == field[i + 2, j + 2])
-                        {
-                            if (field[i, j] == 'x')
-                                array[4] = 2;
-                            else if (field[i, j] == 'o')
-                                array[4] = 1;
-                        }
-                    if (i == j && i == 6)
-                        if (field[i, j] == field[i + 1, j + 1] && field[i, j] == field[i + 2, j + 2])
-                        {
-                            if (field[i, j] == 'x')
-                                array[8] = 2;
-                            else if (field[i, j] == 'o')
-                                array[8] = 1;
-                        }
-                    //3 provjere za sporednu dijagonalu ovaj put u jednom ifu
-                    if (i + j == 8)
+                    for (int j = 0; j < 9; j++)
                     {
-                        if (i == 1)
-                        {
-                            if (field[i, j] == field[i - 1, j + 1] && field[i, j] == field[i + 1, j - 1])
+                        //3 provjere po glavnoj dijagonali
+                        if (i == j && i == 0)
+                            if (field[i, j] == field[i + 1, j + 1] && field[i, j] == field[i + 2, j + 2])
                             {
                                 if (field[i, j] == 'x')
-                                    array[2] = 2;
+                                    array[0] = 2;
                                 else if (field[i, j] == 'o')
+                                    array[0] = 1;
+                            }
+                        if (i == j && i == 3)
+                            if (field[i, j] == field[i + 1, j + 1] && field[i, j] == field[i + 2, j + 2])
+                            {
+                                if (field[i, j] == 'x')
+                                    array[4] = 2;
+                                else if (field[i, j] == 'o')
+                                    array[4] = 1;
+                            }
+                        if (i == j && i == 6)
+                            if (field[i, j] == field[i + 1, j + 1] && field[i, j] == field[i + 2, j + 2])
+                            {
+                                if (field[i, j] == 'x')
+                                    array[8] = 2;
+                                else if (field[i, j] == 'o')
+                                    array[8] = 1;
+                            }
+                        //3 provjere za sporednu dijagonalu ovaj put u jednom ifu
+                        if (i + j == 8)
+                        {
+                            if (i == 1)
+                            {
+                                if (field[i, j] == field[i - 1, j + 1] && field[i, j] == field[i + 1, j - 1])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[2] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[2] = 1;
+                                }
+                            }
+                            if (i == 4)
+                            {
+                                if (field[i, j] == field[i - 1, j + 1] && field[i, j] == field[i + 1, j - 1])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[4] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[4] = 1;
+                                }
+                            }
+                            if (i == 7)
+                            {
+                                if (field[i, j] == field[i - 1, j + 1] && field[i, j] == field[i + 1, j - 1])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[6] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[6] = 1;
+                                }
+                            }
+                        }
+                        //ostale dijagonale:
+                        //to je bezveze if samo da ne provjerava sve te stalo jer ih treba samo jednom, a ostaje u petlji zbog preglednosti
+                        if (i == j && i == 8)
+                        {
+                            if (field[0, 2] == field[1, 1] && field[1, 1] == field[2, 0])
+                            {
+                                if (field[0, 2] == 'x')
+                                    array[0] = 2;
+                                else if (field[0, 2] == 'o')
+                                    array[0] = 1;
+                            }
+                            if (field[6, 8] == field[7, 7] && field[7, 7] == field[8, 6])
+                            {
+                                if (field[6, 8] == 'x')
+                                    array[8] = 2;
+                                else if (field[6, 8] == 'o')
+                                    array[8] = 1;
+                            }
+                            if (field[6, 0] == field[7, 1] && field[7, 1] == field[8, 2])
+                            {
+                                if (field[6, 0] == 'x')
+                                    array[6] = 2;
+                                else if (field[6, 0] == 'o')
+                                    array[6] = 1;
+                            }
+                            if (field[0, 6] == field[1, 7] && field[1, 7] == field[2, 8])
+                            {
+                                if (field[0, 6] == 'x')
+                                    array[2] = 2;
+                                else if (field[0, 6] == 'o')
                                     array[2] = 1;
+                            }
+                            if (field[3, 0] == field[4, 1] && field[4, 1] == field[5, 2])
+                            {
+                                if (field[3, 0] == 'x')
+                                    array[3] = 2;
+                                else if (field[3, 0] == 'o')
+                                    array[3] = 1;
+                            }
+                            if (field[0, 3] == field[1, 4] && field[1, 4] == field[2, 5])
+                            {
+                                if (field[0, 3] == 'x')
+                                    array[1] = 2;
+                                else if (field[0, 3] == 'o')
+                                    array[1] = 1;
+                            }
+                            if (field[3, 2] == field[4, 1] && field[4, 1] == field[5, 0])
+                            {
+                                if (field[3, 2] == 'x')
+                                    array[3] = 2;
+                                else if (field[3, 2] == 'o')
+                                    array[3] = 1;
+                            }
+                            if (field[2, 3] == field[1, 4] && field[1, 4] == field[0, 5])
+                            {
+                                if (field[2, 3] == 'x')
+                                    array[1] = 2;
+                                else if (field[2, 3] == 'o')
+                                    array[1] = 1;
+                            }
+
+                            if (field[5, 6] == field[4, 7] && field[4, 7] == field[3, 8])
+                            {
+                                if (field[5, 6] == 'x')
+                                    array[5] = 2;
+                                else if (field[5, 6] == 'o')
+                                    array[5] = 1;
+                            }
+                            if (field[6, 5] == field[7, 4] && field[7, 4] == field[8, 3])
+                            {
+                                if (field[6, 5] == 'x')
+                                    array[7] = 2;
+                                else if (field[6, 5] == 'o')
+                                    array[7] = 1;
+                            }
+                            if (field[6, 3] == field[7, 4] && field[7, 4] == field[8, 5])
+                            {
+                                if (field[6, 3] == 'x')
+                                    array[7] = 2;
+                                else if (field[6, 3] == 'o')
+                                    array[7] = 1;
+                            }
+                            if (field[3, 6] == field[4, 7] && field[4, 7] == field[5, 8])
+                            {
+                                if (field[3, 6] == 'x')
+                                    array[5] = 2;
+                                else if (field[3, 6] == 'o')
+                                    array[5] = 1;
+                            }
+
+                        }
+
+                        //horizontalne fakat
+                        if (i == 0)
+                        {
+                            if (j == 0)
+                            {
+                                if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[0] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[0] = 1;
+                                }
+                            }
+                            if (j == 3)
+                            {
+                                if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[1] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[1] = 1;
+                                }
+                            }
+                            if (j == 6)
+                            {
+                                if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[2] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[2] = 1;
+                                }
+                            }
+                        }
+                        if (i == 1)
+                        {
+                            if (j == 0)
+                            {
+                                if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[0] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[0] = 1;
+                                }
+                            }
+                            if (j == 3)
+                            {
+                                if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[1] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[1] = 1;
+                                }
+                            }
+                            if (j == 6)
+                            {
+                                if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[2] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[2] = 1;
+                                }
+                            }
+                        }
+                        if (i == 2)
+                        {
+                            if (j == 0)
+                            {
+                                if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[0] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[0] = 1;
+                                }
+                            }
+                            if (j == 3)
+                            {
+                                if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[1] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[1] = 1;
+                                }
+                            }
+                            if (j == 6)
+                            {
+                                if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[2] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[2] = 1;
+                                }
+                            }
+                        }
+                        if (i == 3)
+                        {
+                            if (j == 0)
+                            {
+                                if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[3] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[3] = 1;
+                                }
+                            }
+                            if (j == 3)
+                            {
+                                if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[4] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[4] = 1;
+                                }
+                            }
+                            if (j == 6)
+                            {
+                                if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[5] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[5] = 1;
+                                }
                             }
                         }
                         if (i == 4)
                         {
-                            if (field[i, j] == field[i - 1, j + 1] && field[i, j] == field[i + 1, j - 1])
+                            if (j == 0)
                             {
-                                if (field[i, j] == 'x')
-                                    array[4] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[4] = 1;
+                                if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[3] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[3] = 1;
+                                }
+                            }
+                            if (j == 3)
+                            {
+                                if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[4] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[4] = 1;
+                                }
+                            }
+                            if (j == 6)
+                            {
+                                if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[5] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[5] = 1;
+                                }
+                            }
+                        }
+                        if (i == 5)
+                        {
+                            if (j == 0)
+                            {
+                                if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[3] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[3] = 1;
+                                }
+                            }
+                            if (j == 3)
+                            {
+                                if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[4] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[4] = 1;
+                                }
+                            }
+                            if (j == 6)
+                            {
+                                if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[5] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[5] = 1;
+                                }
+                            }
+                        }
+                        if (i == 6)
+                        {
+                            if (j == 0)
+                            {
+                                if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[6] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[6] = 1;
+                                }
+                            }
+                            if (j == 3)
+                            {
+                                if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[7] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[7] = 1;
+                                }
+                            }
+                            if (j == 6)
+                            {
+                                if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[8] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[8] = 1;
+                                }
                             }
                         }
                         if (i == 7)
                         {
-                            if (field[i, j] == field[i - 1, j + 1] && field[i, j] == field[i + 1, j - 1])
+                            if (j == 0)
                             {
-                                if (field[i, j] == 'x')
-                                    array[6] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[6] = 1;
+                                if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[6] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[6] = 1;
+                                }
+                            }
+                            if (j == 3)
+                            {
+                                if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[7] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[7] = 1;
+                                }
+                            }
+                            if (j == 6)
+                            {
+                                if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[8] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[8] = 1;
+                                }
                             }
                         }
-                    }
-                    //ostale dijagonale:
-                    //to je bezveze if samo da ne provjerava sve te stalo jer ih treba samo jednom, a ostaje u petlji zbog preglednosti
-                    if (i == j && i == 8)
-                    {
-                        if (field[0, 2] == field[1, 1] && field[1, 1] == field[2, 0])
+                        if (i == 8)
                         {
-                            if (field[0, 2] == 'x')
-                                array[0] = 2;
-                            else if (field[0, 2] == 'o')
-                                array[0] = 1;
+                            if (j == 0)
+                            {
+                                if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[6] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[6] = 1;
+                                }
+                            }
+                            if (j == 3)
+                            {
+                                if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[7] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[7] = 1;
+                                }
+                            }
+                            if (j == 6)
+                            {
+                                if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[8] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[8] = 1;
+                                }
+                            }
                         }
-                        if (field[6, 8] == field[7, 7] && field[7, 7] == field[8, 6])
-                        {
-                            if (field[6, 8] == 'x')
-                                array[8] = 2;
-                            else if (field[6, 8] == 'o')
-                                array[8] = 1;
-                        }
-                        if (field[6, 0] == field[7, 1] && field[7, 1] == field[8, 2])
-                        {
-                            if (field[6, 0] == 'x')
-                                array[6] = 2;
-                            else if (field[6, 0] == 'o')
-                                array[6] = 1;
-                        }
-                        if (field[0, 6] == field[1, 7] && field[1, 7] == field[2, 8])
-                        {
-                            if (field[0, 6] == 'x')
-                                array[2] = 2;
-                            else if (field[0, 6] == 'o')
-                                array[2] = 1;
-                        }
-                        if (field[3, 0] == field[4, 1] && field[4, 1] == field[5, 2])
-                        {
-                            if (field[3, 0] == 'x')
-                                array[3] = 2;
-                            else if (field[3, 0] == 'o')
-                                array[3] = 1;
-                        }
-                        if (field[0, 3] == field[1, 4] && field[1, 4] == field[2, 5])
-                        {
-                            if (field[0, 3] == 'x')
-                                array[1] = 2;
-                            else if (field[0, 3] == 'o')
-                                array[1] = 1;
-                        }
-                        if (field[3, 2] == field[4, 1] && field[4, 1] == field[5, 0])
-                        {
-                            if (field[3, 2] == 'x')
-                                array[3] = 2;
-                            else if (field[3, 2] == 'o')
-                                array[3] = 1;
-                        }
-                        if (field[2, 3] == field[1, 4] && field[1, 4] == field[0, 5])
-                        {
-                            if (field[2, 3] == 'x')
-                                array[1] = 2;
-                            else if (field[2, 3] == 'o')
-                                array[1] = 1;
-                        }
-                        
-                        if (field[5, 6] == field[4, 7] && field[4, 7] == field[3, 8])
-                        {
-                            if (field[5, 6] == 'x')
-                                array[5] = 2;
-                            else if (field[5, 6] == 'o')
-                                array[5] = 1;
-                        }
-                        if (field[6, 5] == field[7, 4] && field[7, 4] == field[8, 3])
-                        {
-                            if (field[6, 5] == 'x')
-                                array[7] = 2;
-                            else if (field[6, 5] == 'o')
-                                array[7] = 1;
-                        }
-                        if (field[6, 3] == field[7, 4] && field[7, 4] == field[8, 5])
-                        {
-                            if (field[6, 3] == 'x')
-                                array[7] = 2;
-                            else if (field[6, 3] == 'o')
-                                array[7] = 1;
-                        }
-                        if (field[3, 6] == field[4, 7] && field[4, 7] == field[5, 8])
-                        {
-                            if (field[3, 6] == 'x')
-                                array[5] = 2;
-                            else if (field[3, 6] == 'o')
-                                array[5] = 1;
-                        }
-
-                    }
-
-                    //horizontalne fakat
-                    if (i == 0)
-                    {
+                        //vertikalne 
                         if (j == 0)
                         {
-                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
+                            if (i == 0)
                             {
-                                if (field[i, j] == 'x')
-                                    array[0] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[0] = 1;
+                                if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[0] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[0] = 1;
+                                }
+                            }
+                            if (i == 3)
+                            {
+                                if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[3] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[3] = 1;
+                                }
+                            }
+                            if (i == 6)
+                            {
+                                if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[6] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[6] = 1;
+                                }
+                            }
+                        }
+                        if (j == 1)
+                        {
+                            if (i == 0)
+                            {
+                                if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[0] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[0] = 1;
+                                }
+                            }
+                            if (i == 3)
+                            {
+                                if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[3] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[3] = 1;
+                                }
+                            }
+                            if (i == 6)
+                            {
+                                if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[6] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[6] = 1;
+                                }
+                            }
+                        }
+                        if (j == 2)
+                        {
+                            if (i == 0)
+                            {
+                                if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[0] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[0] = 1;
+                                }
+                            }
+                            if (i == 3)
+                            {
+                                if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[3] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[3] = 1;
+                                }
+                            }
+                            if (i == 6)
+                            {
+                                if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[6] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[6] = 1;
+                                }
                             }
                         }
                         if (j == 3)
                         {
-                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
+                            if (i == 0)
                             {
-                                if (field[i, j] == 'x')
-                                    array[1] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[1] = 1;
+                                if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[1] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[1] = 1;
+                                }
+                            }
+                            if (i == 3)
+                            {
+                                if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[4] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[4] = 1;
+                                }
+                            }
+                            if (i == 6)
+                            {
+                                if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[7] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[7] = 1;
+                                }
+                            }
+                        }
+                        if (j == 4)
+                        {
+                            if (i == 0)
+                            {
+                                if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[1] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[1] = 1;
+                                }
+                            }
+                            if (i == 3)
+                            {
+                                if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[4] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[4] = 1;
+                                }
+                            }
+                            if (i == 6)
+                            {
+                                if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[7] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[7] = 1;
+                                }
+                            }
+                        }
+                        if (j == 5)
+                        {
+                            if (i == 0)
+                            {
+                                if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[1] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[1] = 1;
+                                }
+                            }
+                            if (i == 3)
+                            {
+                                if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[4] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[4] = 1;
+                                }
+                            }
+                            if (i == 6)
+                            {
+                                if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[7] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[7] = 1;
+                                }
                             }
                         }
                         if (j == 6)
                         {
-                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
+                            if (i == 0)
                             {
-                                if (field[i, j] == 'x')
-                                    array[2] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[2] = 1;
+                                if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[2] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[2] = 1;
+                                }
+                            }
+                            if (i == 3)
+                            {
+                                if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[5] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[5] = 1;
+                                }
+                            }
+                            if (i == 6)
+                            {
+                                if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[8] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[8] = 1;
+                                }
+                            }
+                        }
+                        if (j == 7)
+                        {
+                            if (i == 0)
+                            {
+                                if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[2] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[2] = 1;
+                                }
+                            }
+                            if (i == 3)
+                            {
+                                if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[5] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[5] = 1;
+                                }
+                            }
+                            if (i == 6)
+                            {
+                                if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[8] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[8] = 1;
+                                }
+                            }
+                        }
+                        if (j == 8)
+                        {
+                            if (i == 0)
+                            {
+                                if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[2] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[2] = 1;
+                                }
+                            }
+                            if (i == 3)
+                            {
+                                if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[5] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[5] = 1;
+                                }
+                            }
+                            if (i == 6)
+                            {
+                                if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
+                                {
+                                    if (field[i, j] == 'x')
+                                        array[8] = 2;
+                                    else if (field[i, j] == 'o')
+                                        array[8] = 1;
+                                }
                             }
                         }
                     }
-                    if (i == 1)
+                }
+                for (int i = 0; i < 9; i++)
+                {
+                    if (array[i] == 1)
                     {
-                        if (j == 0)
-                        {
-                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[0] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[0] = 1;
-                            }
-                        }
-                        if (j == 3)
-                        {
-                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[1] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[1] = 1;
-                            }
-                        }
-                        if (j == 6)
-                        {
-                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[2] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[2] = 1;
-                            }
-                        }
+                        SetImageOfWin(i, '1');
                     }
-                    if (i == 2)
+                    else if (array[i] == 2)
                     {
-                        if (j == 0)
-                        {
-                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[0] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[0] = 1;
-                            }
-                        }
-                        if (j == 3)
-                        {
-                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[1] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[1] = 1;
-                            }
-                        }
-                        if (j == 6)
-                        {
-                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[2] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[2] = 1;
-                            }
-                        }
-                    }
-                    if (i == 3)
-                    {
-                        if (j == 0)
-                        {
-                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[3] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[3] = 1;
-                            }
-                        }
-                        if (j == 3)
-                        {
-                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[4] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[4] = 1;
-                            }
-                        }
-                        if (j == 6)
-                        {
-                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[5] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[5] = 1;
-                            }
-                        }
-                    }
-                    if (i == 4)
-                    {
-                        if (j == 0)
-                        {
-                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[3] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[3] = 1;
-                            }
-                        }
-                        if (j == 3)
-                        {
-                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[4] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[4] = 1;
-                            }
-                        }
-                        if (j == 6)
-                        {
-                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[5] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[5] = 1;
-                            }
-                        }
-                    }
-                    if (i == 5)
-                    {
-                        if (j == 0)
-                        {
-                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[3] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[3] = 1;
-                            }
-                        }
-                        if (j == 3)
-                        {
-                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[4] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[4] = 1;
-                            }
-                        }
-                        if (j == 6)
-                        {
-                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[5] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[5] = 1;
-                            }
-                        }
-                    }
-                    if (i == 6)
-                    {
-                        if (j == 0)
-                        {
-                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[6] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[6] = 1;
-                            }
-                        }
-                        if (j == 3)
-                        {
-                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[7] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[7] = 1;
-                            }
-                        }
-                        if (j == 6)
-                        {
-                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[8] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[8] = 1;
-                            }
-                        }
-                    }
-                    if (i == 7)
-                    {
-                        if (j == 0)
-                        {
-                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[6] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[6] = 1;
-                            }
-                        }
-                        if (j == 3)
-                        {
-                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[7] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[7] = 1;
-                            }
-                        }
-                        if (j == 6)
-                        {
-                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[8] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[8] = 1;
-                            }
-                        }
-                    }
-                    if (i == 8)
-                    {
-                        if (j == 0)
-                        {
-                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[6] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[6] = 1;
-                            }
-                        }
-                        if (j == 3)
-                        {
-                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[7] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[7] = 1;
-                            }
-                        }
-                        if (j == 6)
-                        {
-                            if (field[i, j] == field[i, j + 1] && field[i, j] == field[i, j + 2])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[8] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[8] = 1;
-                            }
-                        }
-                    }
-                    //vertikalne 
-                    if (j == 0)
-                    {
-                        if (i == 0)
-                        {
-                            if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[0] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[0] = 1;
-                            }
-                        }
-                        if (i == 3)
-                        {
-                            if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[3] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[3] = 1;
-                            }
-                        }
-                        if (i == 6)
-                        {
-                            if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[6] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[6] = 1;
-                            }
-                        }
-                    }
-                    if (j == 1)
-                    {
-                        if (i == 0)
-                        {
-                            if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[0] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[0] = 1;
-                            }
-                        }
-                        if (i == 3)
-                        {
-                            if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[3] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[3] = 1;
-                            }
-                        }
-                        if (i == 6)
-                        {
-                            if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[6] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[6] = 1;
-                            }
-                        }
-                    }
-                    if (j == 2)
-                    {
-                        if (i == 0)
-                        {
-                            if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[0] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[0] = 1;
-                            }
-                        }
-                        if (i == 3)
-                        {
-                            if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[3] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[3] = 1;
-                            }
-                        }
-                        if (i == 6)
-                        {
-                            if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[6] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[6] = 1;
-                            }
-                        }
-                    }
-                    if (j == 3)
-                    {
-                        if (i == 0)
-                        {
-                            if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[1] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[1] = 1;
-                            }
-                        }
-                        if (i == 3)
-                        {
-                            if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[4] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[4] = 1;
-                            }
-                        }
-                        if (i == 6)
-                        {
-                            if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[7] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[7] = 1;
-                            }
-                        }
-                    }
-                    if (j == 4)
-                    {
-                        if (i == 0)
-                        {
-                            if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[1] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[1] = 1;
-                            }
-                        }
-                        if (i == 3)
-                        {
-                            if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[4] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[4] = 1;
-                            }
-                        }
-                        if (i == 6)
-                        {
-                            if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[7] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[7] = 1;
-                            }
-                        }
-                    }
-                    if (j == 5)
-                    {
-                        if (i == 0)
-                        {
-                            if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[1] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[1] = 1;
-                            }
-                        }
-                        if (i == 3)
-                        {
-                            if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[4] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[4] = 1;
-                            }
-                        }
-                        if (i == 6)
-                        {
-                            if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[7] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[7] = 1;
-                            }
-                        }
-                    }
-                    if (j == 6)
-                    {
-                        if (i == 0)
-                        {
-                            if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[2] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[2] = 1;
-                            }
-                        }
-                        if (i == 3)
-                        {
-                            if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[5] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[5] = 1;
-                            }
-                        }
-                        if (i == 6)
-                        {
-                            if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[8] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[8] = 1;
-                            }
-                        }
-                    }
-                    if (j == 7)
-                    {
-                        if (i == 0)
-                        {
-                            if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[2] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[2] = 1;
-                            }
-                        }
-                        if (i == 3)
-                        {
-                            if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[5] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[5] = 1;
-                            }
-                        }
-                        if (i == 6)
-                        {
-                            if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[8] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[8] = 1;
-                            }
-                        }
-                    }
-                    if (j == 8)
-                    {
-                        if (i == 0)
-                        {
-                            if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[2] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[2] = 1;
-                            }
-                        }
-                        if (i == 3)
-                        {
-                            if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[5] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[5] = 1;
-                            }
-                        }
-                        if (i == 6)
-                        {
-                            if (field[i, j] == field[i + 1, j] && field[i, j] == field[i + 2, j])
-                            {
-                                if (field[i, j] == 'x')
-                                    array[8] = 2;
-                                else if (field[i, j] == 'o')
-                                    array[8] = 1;
-                            }
-                        }
+                        SetImageOfWin(i, '2');
                     }
                 }
             }
-            for (int i = 0; i < 9; i++)
-            {
-                if (array[i] == 1)
-                {
-                    SetImageOfWin(i, '1');
-                }
-                else if (array[i] == 2)
-                {
-                    SetImageOfWin(i, '2');
-                }
-            }
+            
 
             if (illegal == 1)
             {
                 //DisplayAlert("Alert", "playfield required= " + playfield_required, "OK");
                 GetSectionBorder(playfield_required - 1).Stroke = Color.FromArgb("#0000FF");
                 GetSectionBorder(playfield_required - 1).StrokeThickness = 3;
-
             }
 
             if(true)
@@ -1078,7 +1108,12 @@ public partial class MainPage : ContentPage
                 pobjeda = 1;
                 reset.IsVisible = true;
             }
+            if(illegal==0)
+            {
+                //stavi border na zadnji gumb kliknut
 
+
+            }
             illegal = 0;
             if (prviPut == 1) prviPut = 0;
 
