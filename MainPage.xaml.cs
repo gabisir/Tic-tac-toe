@@ -10,6 +10,7 @@ public partial class MainPage : ContentPage
 	int playfield = 0;//racunamo u mainu u kojoj se sekciji nalazi kliknut gumb od 1 do 9  !!!!!   OVO JE MOZDA NEPOTREBNO  !!!!!
 	int playfield_required = 0; // definiramo di ce igrac morat igrat isto od 1 do 9 ali ako moze svugdje onda je 0
     int[] array = new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0}; //nerjeseno 3, x je pobjedio 2, o je pobjedio 1, niko jos nije pobjedio 0
+    int[] array_filled = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
     char[,] field = new char[9, 9];
     int illegal = 0;//zastavica koja se stavi na 1 ako je ilegalno
 	int prviPut = 1;
@@ -235,7 +236,133 @@ public partial class MainPage : ContentPage
             if (playfield_required != 0)
             {
                 if (array[playfield_required - 1] != 0)
-                    playfield_required = 0;
+                {
+                    //provjera jel u playfieldu koji je pobjeđen ima praznih mjesta
+                    for (int i = 0; i < 9; i++)
+                    {
+                        for (int j = 0; j < 9; j++)
+                        {
+                            if(i<3 && j<3)
+                            {
+                                ImageButton tempButt2 = (ImageButton)FindByName($"dada{i}{j}".ToString());
+                                if (tempButt2.Source.ToString() == "File:empty.png")
+                                {
+                                    array_filled[playfield_required - 1] = 2;
+                                }
+                                if(array_filled[playfield_required - 1] != 2 && i==2 && j==2)
+                                {
+                                    array_filled[playfield_required - 1] = 1;
+                                    playfield_required = 0;
+                                }
+                            }
+                            if (i < 3 && j > 2 && j<6)
+                            {
+                                ImageButton tempButt2 = (ImageButton)FindByName($"dada{i}{j}".ToString());
+                                if (tempButt2.Source.ToString() == "File:empty.png")
+                                {
+                                    array_filled[playfield_required - 1] = 2;
+                                }
+                                if (array_filled[playfield_required - 1] != 2 && i == 2 && j == 5)
+                                {
+                                    array_filled[playfield_required - 1] = 1;
+                                    playfield_required = 0;
+                                }
+                            }
+                            if (i < 3 && j < 9)
+                            {
+                                ImageButton tempButt2 = (ImageButton)FindByName($"dada{i}{j}".ToString());
+                                if (tempButt2.Source.ToString() == "File:empty.png")
+                                {
+                                    array_filled[playfield_required - 1] = 2;
+                                }
+                                if (array_filled[playfield_required - 1] != 2 && i == 2 && j == 8)
+                                {
+                                    array_filled[playfield_required - 1] = 1;
+                                    playfield_required = 0;
+                                }
+                            }
+                            if (i < 6 && j < 3)
+                            {
+                                ImageButton tempButt2 = (ImageButton)FindByName($"dada{i}{j}".ToString());
+                                if (tempButt2.Source.ToString() == "File:empty.png")
+                                {
+                                    array_filled[playfield_required - 1] = 2;
+                                }
+                                if (array_filled[playfield_required - 1] != 2 && i == 5 && j == 2)
+                                {
+                                    array_filled[playfield_required - 1] = 1;
+                                    playfield_required = 0;
+                                }
+                            }
+                            if (i < 6 && j < 6)
+                            {
+                                ImageButton tempButt2 = (ImageButton)FindByName($"dada{i}{j}".ToString());
+                                if (tempButt2.Source.ToString() == "File:empty.png")
+                                {
+                                    array_filled[playfield_required - 1] = 2;
+                                }
+                                if (array_filled[playfield_required - 1] != 2 && i == 5 && j == 5)
+                                {
+                                    array_filled[playfield_required - 1] = 1;
+                                    playfield_required = 0;
+                                }
+                            }
+                            if (i < 6 && j < 9)
+                            {
+                                ImageButton tempButt2 = (ImageButton)FindByName($"dada{i}{j}".ToString());
+                                if (tempButt2.Source.ToString() == "File:empty.png")
+                                {
+                                    array_filled[playfield_required - 1] = 2;
+                                }
+                                if (array_filled[playfield_required - 1] != 2 && i == 5 && j == 8)
+                                {
+                                    array_filled[playfield_required - 1] = 1;
+                                    playfield_required = 0;
+                                }
+                            }
+                            if (i < 9 && j < 3)
+                            {
+                                ImageButton tempButt2 = (ImageButton)FindByName($"dada{i}{j}".ToString());
+                                if (tempButt2.Source.ToString() == "File:empty.png")
+                                {
+                                    array_filled[playfield_required - 1] = 2;
+                                }
+                                if (array_filled[playfield_required - 1] != 2 && i == 8 && j == 2)
+                                {
+                                    array_filled[playfield_required - 1] = 1;
+                                    playfield_required = 0;
+                                }
+                            }
+                            if (i < 9 && j < 6)
+                            {
+                                ImageButton tempButt2 = (ImageButton)FindByName($"dada{i}{j}".ToString());
+                                if (tempButt2.Source.ToString() == "File:empty.png")
+                                {
+                                    array_filled[playfield_required - 1] = 2;
+                                }
+                                if (array_filled[playfield_required - 1] != 2 && i == 8 && j == 5)
+                                {
+                                    array_filled[playfield_required - 1] = 1;
+                                    playfield_required = 0;
+                                }
+                            }
+                            if (i < 9 && j < 9)
+                            {
+                                ImageButton tempButt2 = (ImageButton)FindByName($"dada{i}{j}".ToString());
+                                if (tempButt2.Source.ToString() == "File:empty.png")
+                                {
+                                    array_filled[playfield_required - 1] = 2;
+                                }
+                                if (array_filled[playfield_required - 1] != 2 && i == 8 && j == 8)
+                                {
+                                    array_filled[playfield_required - 1] = 1;
+                                    playfield_required = 0;
+                                }
+                            }
+
+                        }
+                    }
+                }
             }
 
             if (playfield != playfield_required && prviPut == 0)
@@ -1127,6 +1254,17 @@ public partial class MainPage : ContentPage
                 winner.Text = "The winner is: O";
                 pobjeda = 1;
                 reset.IsVisible = true;
+            }
+            for (int i = 0; i < 9; i++)
+            {
+                for (int j = 0; j < 9; j++)
+                {
+                    ImageButton tempButt2 = (ImageButton)FindByName($"dada{i}{j}".ToString());
+                    if (tempButt2.Source.ToString() == "File: empty.png")
+                    {
+                        
+                    }
+                }
             }
             if (illegal == 0)
             {
