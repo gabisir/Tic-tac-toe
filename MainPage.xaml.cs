@@ -47,33 +47,32 @@ public partial class MainPage : ContentPage
         switch (playfield)
         {
             case 0:
-                if(dada11.Source.ToString() != "File:empty.png" && dada12.Source.ToString() != "File:empty.png" && dada13.Source.ToString() != "File:empty.png" && dada21.Source.ToString() != "File:empty.png" && dada22.Source.ToString() != "File:empty.png" && dada23.Source.ToString() != "File:empty.png" && dada31.Source.ToString() != "File:empty.png" && dada32.Source.ToString() != "File:empty.png" && dada33.Source.ToString() != "File:empty.png") return true;
+                if(dada11.Source.ToString() != "File: empty.png" && dada12.Source.ToString() != "File: empty.png" && dada13.Source.ToString() != "File: empty.png" && dada21.Source.ToString() != "File: empty.png" && dada22.Source.ToString() != "File: empty.png" && dada23.Source.ToString() != "File: empty.png" && dada31.Source.ToString() != "File: empty.png" && dada32.Source.ToString() != "File: empty.png" && dada33.Source.ToString() != "File: empty.png") return true;
                 break;
             case 1:
-                if (dada14.Source.ToString() != "File:empty.png" && dada15.Source.ToString() != "File:empty.png" && dada16.Source.ToString() != "File:empty.png" && dada24.Source.ToString() != "File:empty.png" && dada25.Source.ToString() != "File:empty.png" && dada26.Source.ToString() != "File:empty.png" && dada34.Source.ToString() != "File:empty.png" && dada35.Source.ToString() != "File:empty.png" && dada36.Source.ToString() != "File:empty.png") return true;
+                if (dada14.Source.ToString() != "File: empty.png" && dada15.Source.ToString() != "File: empty.png" && dada16.Source.ToString() != "File: empty.png" && dada24.Source.ToString() != "File: empty.png" && dada25.Source.ToString() != "File: empty.png" && dada26.Source.ToString() != "File: empty.png" && dada34.Source.ToString() != "File: empty.png" && dada35.Source.ToString() != "File: empty.png" && dada36.Source.ToString() != "File: empty.png") return true;
                 break;
             case 2:
-                if (dada17.Source.ToString() != "File:empty.png" && dada18.Source.ToString() != "File:empty.png" && dada19.Source.ToString() != "File:empty.png" && dada27.Source.ToString() != "File:empty.png" && dada28.Source.ToString() != "File:empty.png" && dada29.Source.ToString() != "File:empty.png" && dada37.Source.ToString() != "File:empty.png" && dada38.Source.ToString() != "File:empty.png" && dada39.Source.ToString() != "File:empty.png") return true;
+                if (dada17.Source.ToString() != "File: empty.png" && dada18.Source.ToString() != "File: empty.png" && dada19.Source.ToString() != "File: empty.png" && dada27.Source.ToString() != "File: empty.png" && dada28.Source.ToString() != "File: empty.png" && dada29.Source.ToString() != "File: empty.png" && dada37.Source.ToString() != "File: empty.png" && dada38.Source.ToString() != "File: empty.png" && dada39.Source.ToString() != "File: empty.png") return true;
                 break;
             case 3:
-                if (dada41.Source.ToString() != "File:empty.png" && dada42.Source.ToString() != "File:empty.png" && dada43.Source.ToString() != "File:empty.png" && dada51.Source.ToString() != "File:empty.png" && dada52.Source.ToString() != "File:empty.png" && dada53.Source.ToString() != "File:empty.png" && dada61.Source.ToString() != "File:empty.png" && dada62.Source.ToString() != "File:empty.png" && dada63.Source.ToString() != "File:empty.png") return true;
+                if (dada41.Source.ToString() != "File: empty.png" && dada42.Source.ToString() != "File: empty.png" && dada43.Source.ToString() != "File: empty.png" && dada51.Source.ToString() != "File: empty.png" && dada52.Source.ToString() != "File: empty.png" && dada53.Source.ToString() != "File: empty.png" && dada61.Source.ToString() != "File: empty.png" && dada62.Source.ToString() != "File: empty.png" && dada63.Source.ToString() != "File: empty.png") return true;
                 break;
             case 4:
-                if (dada44.Source.ToString() != "File:empty.png" && dada45.Source.ToString() != "File:empty.png" && dada46.Source.ToString() != "File:empty.png" && dada54.Source.ToString() != "File:empty.png" && dada55.Source.ToString() != "File:empty.png" && dada56.Source.ToString() != "File:empty.png" && dada64.Source.ToString() != "File:empty.png" && dada65.Source.ToString() != "File:empty.png" && dada66.Source.ToString() != "File:empty.png") return true;
+                if (dada44.Source.ToString() != "File: empty.png" && dada45.Source.ToString() != "File: empty.png" && dada46.Source.ToString() != "File: empty.png" && dada54.Source.ToString() != "File: empty.png" && dada55.Source.ToString() != "File: empty.png" && dada56.Source.ToString() != "File: empty.png" && dada64.Source.ToString() != "File: empty.png" && dada65.Source.ToString() != "File: empty.png" && dada66.Source.ToString() != "File: empty.png") return true;
                 break;
             case 5:
-                if (dada47.Source.ToString() != "File:empty.png" && dada48.Source.ToString() != "File:empty.png" && dada49.Source.ToString() != "File:empty.png" && dada57.Source.ToString() != "File:empty.png" && dada58.Source.ToString() != "File:empty.png" && dada59.Source.ToString() != "File:empty.png" && dada67.Source.ToString() != "File:empty.png" && dada68.Source.ToString() != "File:empty.png" && dada69.Source.ToString() != "File:empty.png") return true;
+                if (dada47.Source.ToString() != "File: empty.png" && dada48.Source.ToString() != "File: empty.png" && dada49.Source.ToString() != "File: empty.png" && dada57.Source.ToString() != "File: empty.png" && dada58.Source.ToString() != "File: empty.png" && dada59.Source.ToString() != "File: empty.png" && dada67.Source.ToString() != "File: empty.png" && dada68.Source.ToString() != "File: empty.png" && dada69.Source.ToString() != "File: empty.png") return true;
                 break;
             case 6:
-                if (dada71.Source.ToString() != "File:empty.png" && dada72.Source.ToString() != "File:empty.png" && dada73.Source.ToString() != "File:empty.png" && dada81.Source.ToString() != "File:empty.png" && dada82.Source.ToString() != "File:empty.png" && dada83.Source.ToString() != "File:empty.png" && dada91.Source.ToString() != "File:empty.png" && dada92.Source.ToString() != "File:empty.png" && dada93.Source.ToString() != "File:empty.png") return true;
+                if (dada71.Source.ToString() != "File: empty.png" && dada72.Source.ToString() != "File: empty.png" && dada73.Source.ToString() != "File: empty.png" && dada81.Source.ToString() != "File: empty.png" && dada82.Source.ToString() != "File: empty.png" && dada83.Source.ToString() != "File: empty.png" && dada91.Source.ToString() != "File: empty.png" && dada92.Source.ToString() != "File: empty.png" && dada93.Source.ToString() != "File: empty.png") return true;
                 break;
             case 7:
-                if (dada74.Source.ToString() != "File:empty.png" && dada75.Source.ToString() != "File:empty.png" && dada76.Source.ToString() != "File:empty.png" && dada84.Source.ToString() != "File:empty.png" && dada85.Source.ToString() != "File:empty.png" && dada86.Source.ToString() != "File:empty.png" && dada94.Source.ToString() != "File:empty.png" && dada95.Source.ToString() != "File:empty.png" && dada96.Source.ToString() != "File:empty.png") return true;
+                if (dada74.Source.ToString() != "File: empty.png" && dada75.Source.ToString() != "File: empty.png" && dada76.Source.ToString() != "File: empty.png" && dada84.Source.ToString() != "File: empty.png" && dada85.Source.ToString() != "File: empty.png" && dada86.Source.ToString() != "File: empty.png" && dada94.Source.ToString() != "File: empty.png" && dada95.Source.ToString() != "File: empty.png" && dada96.Source.ToString() != "File: empty.png") return true;
                 break;
             case 8:
-                if (dada77.Source.ToString() != "File:empty.png" && dada78.Source.ToString() != "File:empty.png" && dada79.Source.ToString() != "File:empty.png" && dada87.Source.ToString() != "File:empty.png" && dada88.Source.ToString() != "File:empty.png" && dada89.Source.ToString() != "File:empty.png" && dada97.Source.ToString() != "File:empty.png" && dada98.Source.ToString() != "File:empty.png" && dada99.Source.ToString() != "File:empty.png") return true;
+                if (dada77.Source.ToString() != "File: empty.png" && dada78.Source.ToString() != "File: empty.png" && dada79.Source.ToString() != "File: empty.png" && dada87.Source.ToString() != "File: empty.png" && dada88.Source.ToString() != "File: empty.png" && dada89.Source.ToString() != "File: empty.png" && dada97.Source.ToString() != "File: empty.png" && dada98.Source.ToString() != "File: empty.png" && dada99.Source.ToString() != "File: empty.png") return true;
                 break;
-            default: return false;
         }
         return false;
     }
@@ -210,14 +209,21 @@ public partial class MainPage : ContentPage
                 }
             }
         }
-        for(int i =0; i < 9; i++)
+        for(int i = 0; i < 9; i++)
         {
             Image tempButt3 = (Image)FindByName($"Img{i}".ToString());
+            Border tempBord = GetSectionBorder(i);
+            if (tempBord != null) {
+                tempBord.Stroke = Color.FromArgb("FF0000");
+                tempBord.StrokeThickness = 1;
+                tempBord.Margin = -1;
+            }
             if (tempButt3 != null)
             {
                 tempButt3.Source = "empty.png";
             }
         }
+        
     }
 
     private void EventClickedHandler(object sender, EventArgs e)
@@ -255,14 +261,6 @@ public partial class MainPage : ContentPage
             {
                 illegal = 1;
             }
-            if(illegal==0)
-            {
-
-
-                //tu bi stavio ako je prazno polje odabrano nek stavi border na gumb 
-
-
-            }
             if (illegal == 0)
             {
                 //provjerava u kojoj se sekciji nalazi kliknut gumb
@@ -276,18 +274,7 @@ public partial class MainPage : ContentPage
                 if (classId[0] > '6' && classId[0] <= '9' && classId[1] > '3' && classId[1] <= '6') { playfield = 8; }
                 if (classId[0] > '6' && classId[0] <= '9' && classId[1] > '6' && classId[1] <= '9') { playfield = 9; }
             }
-            if (playfield_required != 0)
-            {
-                if (array[playfield_required - 1] != 0)
-                {
-                    //provjera jel u playfieldu koji je pobjeđen ima praznih mjesta
-                    if (IsNotFilled(playfield - 1)) {
-                        Image tempImg = (Image)FindByName($"Img{playfield}");
-                        tempImg.Opacity = 1;
-                        playfield_required = 0;
-                    }
-                }
-            }
+            
 
             if (playfield != playfield_required && prviPut == 0)
             {
@@ -1191,6 +1178,22 @@ public partial class MainPage : ContentPage
             // if(pobjeda) {
             //winner.Text = $"Winner is {who}";
             // }
+            if (playfield_required != 0)
+            {
+                if (array[playfield - 1] != 0)
+                {
+                    //provjera jel u playfieldu koji je pobjeđen ima praznih mjesta
+                    if (IsNotFilled(playfield - 1))
+                    {
+                        Image tempImg = (Image)FindByName($"Img{playfield}");
+                        tempImg.Opacity = 1;
+                    }
+                }
+            }
+            if (IsNotFilled(playfield_required - 1) && playfield != playfield_required) // GLEDAJ OVO, KINDA SUS
+            {
+                playfield_required = 0;
+            }
         }
     }
 }
