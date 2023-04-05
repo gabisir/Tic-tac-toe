@@ -186,6 +186,7 @@ public partial class MainPage : ContentPage
     {
         //here goes reset;
         count = 1;
+        who = 'f';
         playfield = 0;
         playfield_required = 0;
         pobjeda = 0;
@@ -196,10 +197,11 @@ public partial class MainPage : ContentPage
                 field[i, j] = '0';
         illegal = 0;
         prviPut = 1;
+        winner.Text = null;
         ImageButton lastButton = null;
-        for(int i = 0; i < 9; i++)
+        for(int i = 1; i < 10; i++)
         {
-            for(int j = 0; j < 9; j++)
+            for(int j = 1; j < 10; j++)
             {
                 ImageButton tempButt = (ImageButton)FindByName($"dada{i}{j}".ToString());
                 if (tempButt != null)
@@ -209,7 +211,7 @@ public partial class MainPage : ContentPage
                 }
             }
         }
-        for(int i = 0; i < 9; i++)
+        for(int i = 1; i < 10; i++)
         {
             Image tempButt3 = (Image)FindByName($"Img{i}".ToString());
             Border tempBord = GetSectionBorder(i);
@@ -1168,6 +1170,12 @@ public partial class MainPage : ContentPage
             {
                 winner.Text = "The winner is: O";
                 pobjeda = 1;
+                reset.IsVisible = true;
+            }
+            else if(who!='o' && who!='x')
+            {
+                winner.Text = " ";
+                pobjeda = 0;
                 reset.IsVisible = true;
             }
             if (illegal == 0)
