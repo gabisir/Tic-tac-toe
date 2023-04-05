@@ -274,8 +274,8 @@ public partial class MainPage : ContentPage
                 if (classId[0] > '6' && classId[0] <= '9' && classId[1] > '3' && classId[1] <= '6') { playfield = 8; }
                 if (classId[0] > '6' && classId[0] <= '9' && classId[1] > '6' && classId[1] <= '9') { playfield = 9; }
             }
-            
 
+            
             if (playfield != playfield_required && prviPut == 0)
             {
                 illegal = 1;
@@ -299,6 +299,10 @@ public partial class MainPage : ContentPage
                 if (classId == "31" || classId == "34" || classId == "37" || classId == "61" || classId == "64" || classId == "67" || classId == "91" || classId == "94" || classId == "97") { playfield_required = 7; }
                 if (classId == "32" || classId == "35" || classId == "38" || classId == "62" || classId == "65" || classId == "68" || classId == "92" || classId == "95" || classId == "98") { playfield_required = 8; }
                 if (classId == "33" || classId == "36" || classId == "39" || classId == "63" || classId == "66" || classId == "69" || classId == "93" || classId == "96" || classId == "99") { playfield_required = 9; }
+            }
+            if (IsNotFilled(playfield_required - 1) && playfield != playfield_required && button.Source.ToString() != "File: empty.png") // GLEDAJ OVO, KINDA SUS
+            {
+                playfield_required = 0;
             }
 
             //set image on button
@@ -1190,10 +1194,7 @@ public partial class MainPage : ContentPage
                     }
                 }
             }
-            if (IsNotFilled(playfield_required - 1) && playfield != playfield_required) // GLEDAJ OVO, KINDA SUS
-            {
-                playfield_required = 0;
-            }
+            
         }
     }
 }
