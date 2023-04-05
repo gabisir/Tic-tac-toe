@@ -42,36 +42,36 @@ public partial class MainPage : ContentPage
             default: return PrviB;
         }
     }
-    private bool IsFilled(int playfield)
+    private bool IsNotFilled(int playfield)
     {
         switch (playfield)
         {
             case 0:
-                if(!(dada11.Source.ToString() == "File:empty.png" && dada12.Source.ToString() == "File:empty.png" && dada13.Source.ToString() == "File:empty.png" && dada21.Source.ToString() == "File:empty.png" && dada22.Source.ToString() == "File:empty.png" && dada23.Source.ToString() == "File:empty.png" && dada31.Source.ToString() == "File:empty.png" && dada32.Source.ToString() == "File:empty.png" && dada33.Source.ToString() == "File:empty.png")) return true;
+                if((dada11.Source.ToString() != "File:empty.png" && dada12.Source.ToString() != "File:empty.png" && dada13.Source.ToString() != "File:empty.png" && dada21.Source.ToString() != "File:empty.png" && dada22.Source.ToString() != "File:empty.png" && dada23.Source.ToString() != "File:empty.png" && dada31.Source.ToString() != "File:empty.png" && dada32.Source.ToString() != "File:empty.png" && dada33.Source.ToString() != "File:empty.png")) return true;
                 break;
             case 1:
-                if (!(dada14.Source.ToString() == "File:empty.png" && dada15.Source.ToString() == "File:empty.png" && dada16.Source.ToString() == "File:empty.png" && dada24.Source.ToString() == "File:empty.png" && dada25.Source.ToString() == "File:empty.png" && dada26.Source.ToString() == "File:empty.png" && dada34.Source.ToString() == "File:empty.png" && dada35.Source.ToString() == "File:empty.png" && dada36.Source.ToString() == "File:empty.png")) return true;
+                if ((dada14.Source.ToString() != "File:empty.png" && dada15.Source.ToString() != "File:empty.png" && dada16.Source.ToString() != "File:empty.png" && dada24.Source.ToString() != "File:empty.png" && dada25.Source.ToString() != "File:empty.png" && dada26.Source.ToString() != "File:empty.png" && dada34.Source.ToString() != "File:empty.png" && dada35.Source.ToString() != "File:empty.png" && dada36.Source.ToString() != "File:empty.png")) return true;
                 break;
             case 2:
-                if (!(dada17.Source.ToString() == "File:empty.png" && dada18.Source.ToString() == "File:empty.png" && dada19.Source.ToString() == "File:empty.png" && dada27.Source.ToString() == "File:empty.png" && dada28.Source.ToString() == "File:empty.png" && dada29.Source.ToString() == "File:empty.png" && dada37.Source.ToString() == "File:empty.png" && dada38.Source.ToString() == "File:empty.png" && dada39.Source.ToString() == "File:empty.png")) return true;
+                if ((dada17.Source.ToString() != "File:empty.png" && dada18.Source.ToString() != "File:empty.png" && dada19.Source.ToString() != "File:empty.png" && dada27.Source.ToString() != "File:empty.png" && dada28.Source.ToString() != "File:empty.png" && dada29.Source.ToString() != "File:empty.png" && dada37.Source.ToString() != "File:empty.png" && dada38.Source.ToString() != "File:empty.png" && dada39.Source.ToString() != "File:empty.png")) return true;
                 break;
             case 3:
-                if (!(dada41.Source.ToString() == "File:empty.png" && dada42.Source.ToString() == "File:empty.png" && dada43.Source.ToString() == "File:empty.png" && dada51.Source.ToString() == "File:empty.png" && dada52.Source.ToString() == "File:empty.png" && dada53.Source.ToString() == "File:empty.png" && dada61.Source.ToString() == "File:empty.png" && dada62.Source.ToString() == "File:empty.png" && dada63.Source.ToString() == "File:empty.png")) return true;
+                if ((dada41.Source.ToString() != "File:empty.png" && dada42.Source.ToString() != "File:empty.png" && dada43.Source.ToString() != "File:empty.png" && dada51.Source.ToString() != "File:empty.png" && dada52.Source.ToString() != "File:empty.png" && dada53.Source.ToString() != "File:empty.png" && dada61.Source.ToString() != "File:empty.png" && dada62.Source.ToString() != "File:empty.png" && dada63.Source.ToString() != "File:empty.png")) return true;
                 break;
             case 4:
-                if (!(dada44.Source.ToString() == "File:empty.png" && dada45.Source.ToString() == "File:empty.png" && dada46.Source.ToString() == "File:empty.png" && dada54.Source.ToString() == "File:empty.png" && dada55.Source.ToString() == "File:empty.png" && dada56.Source.ToString() == "File:empty.png" && dada64.Source.ToString() == "File:empty.png" && dada65.Source.ToString() == "File:empty.png" && dada66.Source.ToString() == "File:empty.png")) return true;
+                if ((dada44.Source.ToString() != "File:empty.png" && dada45.Source.ToString() != "File:empty.png" && dada46.Source.ToString() != "File:empty.png" && dada54.Source.ToString() != "File:empty.png" && dada55.Source.ToString() != "File:empty.png" && dada56.Source.ToString() != "File:empty.png" && dada64.Source.ToString() != "File:empty.png" && dada65.Source.ToString() != "File:empty.png" && dada66.Source.ToString() != "File:empty.png")) return true;
                 break;
             case 5:
-                if (!(dada47.Source.ToString() == "File:empty.png" && dada48.Source.ToString() == "File:empty.png" && dada49.Source.ToString() == "File:empty.png" && dada57.Source.ToString() == "File:empty.png" && dada58.Source.ToString() == "File:empty.png" && dada59.Source.ToString() == "File:empty.png" && dada67.Source.ToString() == "File:empty.png" && dada68.Source.ToString() == "File:empty.png" && dada69.Source.ToString() == "File:empty.png")) return true;
+                if ((dada47.Source.ToString() != "File:empty.png" && dada48.Source.ToString() != "File:empty.png" && dada49.Source.ToString() != "File:empty.png" && dada57.Source.ToString() != "File:empty.png" && dada58.Source.ToString() != "File:empty.png" && dada59.Source.ToString() != "File:empty.png" && dada67.Source.ToString() != "File:empty.png" && dada68.Source.ToString() != "File:empty.png" && dada69.Source.ToString() != "File:empty.png")) return true;
                 break;
             case 6:
-                if (!(dada71.Source.ToString() == "File:empty.png" && dada72.Source.ToString() == "File:empty.png" && dada73.Source.ToString() == "File:empty.png" && dada81.Source.ToString() == "File:empty.png" && dada82.Source.ToString() == "File:empty.png" && dada83.Source.ToString() == "File:empty.png" && dada91.Source.ToString() == "File:empty.png" && dada92.Source.ToString() == "File:empty.png" && dada93.Source.ToString() == "File:empty.png")) return true;
+                if ((dada71.Source.ToString() != "File:empty.png" && dada72.Source.ToString() != "File:empty.png" && dada73.Source.ToString() != "File:empty.png" && dada81.Source.ToString() != "File:empty.png" && dada82.Source.ToString() != "File:empty.png" && dada83.Source.ToString() != "File:empty.png" && dada91.Source.ToString() != "File:empty.png" && dada92.Source.ToString() != "File:empty.png" && dada93.Source.ToString() != "File:empty.png")) return true;
                 break;
             case 7:
-                if (!(dada74.Source.ToString() == "File:empty.png" && dada75.Source.ToString() == "File:empty.png" && dada76.Source.ToString() == "File:empty.png" && dada84.Source.ToString() == "File:empty.png" && dada85.Source.ToString() == "File:empty.png" && dada86.Source.ToString() == "File:empty.png" && dada94.Source.ToString() == "File:empty.png" && dada95.Source.ToString() == "File:empty.png" && dada96.Source.ToString() == "File:empty.png")) return true;
+                if ((dada74.Source.ToString() != "File:empty.png" && dada75.Source.ToString() != "File:empty.png" && dada76.Source.ToString() != "File:empty.png" && dada84.Source.ToString() != "File:empty.png" && dada85.Source.ToString() != "File:empty.png" && dada86.Source.ToString() != "File:empty.png" && dada94.Source.ToString() != "File:empty.png" && dada95.Source.ToString() != "File:empty.png" && dada96.Source.ToString() != "File:empty.png")) return true;
                 break;
             case 8:
-                if (!(dada77.Source.ToString() == "File:empty.png" && dada78.Source.ToString() == "File:empty.png" && dada79.Source.ToString() == "File:empty.png" && dada87.Source.ToString() == "File:empty.png" && dada88.Source.ToString() == "File:empty.png" && dada89.Source.ToString() == "File:empty.png" && dada97.Source.ToString() == "File:empty.png" && dada98.Source.ToString() == "File:empty.png" && dada99.Source.ToString() == "File:empty.png")) return true;
+                if ((dada77.Source.ToString() != "File:empty.png" && dada78.Source.ToString() != "File:empty.png" && dada79.Source.ToString() != "File:empty.png" && dada87.Source.ToString() != "File:empty.png" && dada88.Source.ToString() != "File:empty.png" && dada89.Source.ToString() != "File:empty.png" && dada97.Source.ToString() != "File:empty.png" && dada98.Source.ToString() != "File:empty.png" && dada99.Source.ToString() != "File:empty.png")) return true;
                 break;
             default: return false;
         }
@@ -210,6 +210,14 @@ public partial class MainPage : ContentPage
                 }
             }
         }
+        for(int i =0; i < 9; i++)
+        {
+            Image tempButt3 = (Image)FindByName($"Img{i}".ToString());
+            if (tempButt3 != null)
+            {
+                tempButt3.Source = "empty.png";
+            }
+        }
     }
 
     private void EventClickedHandler(object sender, EventArgs e)
@@ -273,129 +281,10 @@ public partial class MainPage : ContentPage
                 if (array[playfield_required - 1] != 0)
                 {
                     //provjera jel u playfieldu koji je pobjeđen ima praznih mjesta
-                    for (int i = 0; i < 9; i++)
-                    {
-                        for (int j = 0; j < 9; j++)
-                        {
-                            if(i<3 && j<3)
-                            {
-                                ImageButton tempButt2 = (ImageButton)FindByName($"dada{i}{j}".ToString());
-                                if (tempButt2.Source.ToString() == "File:empty.png")
-                                {
-                                    array_filled[playfield_required - 1] = 2;
-                                }
-                                if(array_filled[playfield_required - 1] != 2 && i==2 && j==2)
-                                {
-                                    array_filled[playfield_required - 1] = 1;
-                                    playfield_required = 0;
-                                }
-                            }
-                            if (i < 3 && j > 2 && j<6)
-                            {
-                                ImageButton tempButt2 = (ImageButton)FindByName($"dada{i}{j}".ToString());
-                                if (tempButt2.Source.ToString() == "File:empty.png")
-                                {
-                                    array_filled[playfield_required - 1] = 2;
-                                }
-                                if (array_filled[playfield_required - 1] != 2 && i == 2 && j == 5)
-                                {
-                                    array_filled[playfield_required - 1] = 1;
-                                    playfield_required = 0;
-                                }
-                            }
-                            if (i < 3 && j < 9)
-                            {
-                                ImageButton tempButt2 = (ImageButton)FindByName($"dada{i}{j}".ToString());
-                                if (tempButt2.Source.ToString() == "File:empty.png")
-                                {
-                                    array_filled[playfield_required - 1] = 2;
-                                }
-                                if (array_filled[playfield_required - 1] != 2 && i == 2 && j == 8)
-                                {
-                                    array_filled[playfield_required - 1] = 1;
-                                    playfield_required = 0;
-                                }
-                            }
-                            if (i < 6 && j < 3)
-                            {
-                                ImageButton tempButt2 = (ImageButton)FindByName($"dada{i}{j}".ToString());
-                                if (tempButt2.Source.ToString() == "File:empty.png")
-                                {
-                                    array_filled[playfield_required - 1] = 2;
-                                }
-                                if (array_filled[playfield_required - 1] != 2 && i == 5 && j == 2)
-                                {
-                                    array_filled[playfield_required - 1] = 1;
-                                    playfield_required = 0;
-                                }
-                            }
-                            if (i < 6 && j < 6)
-                            {
-                                ImageButton tempButt2 = (ImageButton)FindByName($"dada{i}{j}".ToString());
-                                if (tempButt2.Source.ToString() == "File:empty.png")
-                                {
-                                    array_filled[playfield_required - 1] = 2;
-                                }
-                                if (array_filled[playfield_required - 1] != 2 && i == 5 && j == 5)
-                                {
-                                    array_filled[playfield_required - 1] = 1;
-                                    playfield_required = 0;
-                                }
-                            }
-                            if (i < 6 && j < 9)
-                            {
-                                ImageButton tempButt2 = (ImageButton)FindByName($"dada{i}{j}".ToString());
-                                if (tempButt2.Source.ToString() == "File:empty.png")
-                                {
-                                    array_filled[playfield_required - 1] = 2;
-                                }
-                                if (array_filled[playfield_required - 1] != 2 && i == 5 && j == 8)
-                                {
-                                    array_filled[playfield_required - 1] = 1;
-                                    playfield_required = 0;
-                                }
-                            }
-                            if (i < 9 && j < 3)
-                            {
-                                ImageButton tempButt2 = (ImageButton)FindByName($"dada{i}{j}".ToString());
-                                if (tempButt2.Source.ToString() == "File:empty.png")
-                                {
-                                    array_filled[playfield_required - 1] = 2;
-                                }
-                                if (array_filled[playfield_required - 1] != 2 && i == 8 && j == 2)
-                                {
-                                    array_filled[playfield_required - 1] = 1;
-                                    playfield_required = 0;
-                                }
-                            }
-                            if (i < 9 && j < 6)
-                            {
-                                ImageButton tempButt2 = (ImageButton)FindByName($"dada{i}{j}".ToString());
-                                if (tempButt2.Source.ToString() == "File:empty.png")
-                                {
-                                    array_filled[playfield_required - 1] = 2;
-                                }
-                                if (array_filled[playfield_required - 1] != 2 && i == 8 && j == 5)
-                                {
-                                    array_filled[playfield_required - 1] = 1;
-                                    playfield_required = 0;
-                                }
-                            }
-                            if (i < 9 && j < 9)
-                            {
-                                ImageButton tempButt2 = (ImageButton)FindByName($"dada{i}{j}".ToString());
-                                if (tempButt2.Source.ToString() == "File:empty.png")
-                                {
-                                    array_filled[playfield_required - 1] = 2;
-                                }
-                                if (array_filled[playfield_required - 1] != 2 && i == 8 && j == 8)
-                                {
-                                    array_filled[playfield_required - 1] = 1;
-                                    playfield_required = 0;
-                                }
-                            }
-
-                        }
+                    if (IsNotFilled(playfield - 1)) {
+                        Image tempImg = (Image)FindByName($"Img{playfield}");
+                        tempImg.Opacity = 1;
+                        playfield_required = 0;
                     }
                 }
             }
@@ -1289,17 +1178,6 @@ public partial class MainPage : ContentPage
                 winner.Text = "The winner is: O";
                 pobjeda = 1;
                 reset.IsVisible = true;
-            }
-            for (int i = 0; i < 9; i++)
-            {
-                for (int j = 0; j < 9; j++)
-                {
-                    ImageButton tempButt2 = (ImageButton)FindByName($"dada{i}{j}".ToString());
-                    if (tempButt2.Source.ToString() == "File: empty.png")
-                    {
-                        
-                    }
-                }
             }
             if (illegal == 0)
             {
